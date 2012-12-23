@@ -32,6 +32,7 @@ Requirement
 ===========
 * Python 2.7 or later (not support 3.x)
 * Sphinx 1.1.x or later.
+* sphinx.themecore 0.1.3 or later.
 
 
 License
