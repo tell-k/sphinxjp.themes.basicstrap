@@ -44,9 +44,9 @@
 
 {%- macro sidebar(for_mobile=False) %}
 {%- if render_sidebar %}
-<div class="span{{ theme_sidebar_span }}">
+<div class="span{{ theme_sidebar_span }} {% if not (for_mobile|tobool) %}visible-desktop visible-tablet{% endif %}">
   {%- if (for_mobile|tobool) and (not theme_noresponsive|tobool) %}
-  <a class="visible-phone btn btn-small show-sidebar" data-toggle="collapse" data-target=".sidebar">Open Siderbar</a>
+  <a class="visible-phone btn btn-small show-sidebar" data-toggle="collapse" data-target=".for-mobile">Open Table Of Contents</a>
   {%- endif %}
   <div class="{% if (for_mobile|tobool) %}for-mobile{% endif %} sidebar hidden-phone">
     {%- block sidebarlogo %}
@@ -106,13 +106,11 @@
   $(document).ready(function(){
     $('.show-sidebar').click(function(e) {
        e.preventDefault();
-       if ($('.for-mobile').hasClass('hidden-phone')) {
-         $('.for-mobile').removeClass('hidden-phone');
-       }
-       if ($(".for-mobile").css("display") == "block") {
-          $(".show-sidebar").html("Close Sidebar");
+       if ($(".show-sidebar").html() == "Open Table Of Contents") {
+          $('.for-mobile').removeClass('hidden-phone');
+          $(".show-sidebar").html("Close Table Of Contents");
        } else {
-          $(".show-sidebar").html("Open Sidebar");
+          $(".show-sidebar").html("Open Table Of Contents");
        }
     });
   });
@@ -226,13 +224,13 @@
     <!-- container -->
     <div class="{% if (not theme_content_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
 
+      <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %} hidden-desktop hidden-tablet">
+      {{ sidebar(for_mobile=True) }}
+      </div>
+
       <!-- row -->
       <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">
         {%- block content %}
-
-        {%- block sidebar_for_mobile %}
-          {{ sidebar(for_mobile=True) }}
-        {% endblock %}
 
         {%- block sidebar1 %}
         {% if (not theme_rightsidebar|tobool) %} {{ sidebar() }} {% endif %}
