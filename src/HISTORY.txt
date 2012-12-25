@@ -1,6 +1,12 @@
 History
 =======
 
+0.1.1 (Dec 26, 2012)
+---------------------
+* adjust css
+* update Twitter Bootstrap ver2.2.2
+* update jQuery ver1.8.3
+
 0.1.0 (Dec 23, 2012)
 ---------------------
 * first release

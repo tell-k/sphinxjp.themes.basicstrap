@@ -1,0 +1,19 @@
+{%- if (theme_googlewebfont|tobool) %}
+body {
+  {{ theme_googlewebfont_style }}
+}
+{%- endif %}
+
+@media (min-width: 768px) {
+  {% if theme_nav_fixed %}
+  .navbar-inner div.container {
+    width: {{ theme_nav_width }};
+  }
+  {% endif %}
+  {% if theme_content_fixed %}
+  div.container {
+    width: {{ theme_content_width }};
+  }
+  {% endif %}
+}
+

@@ -3,6 +3,10 @@ Basicstrap style theme for Sphinx.
 Features
 ========
 * provide ``basicstrap`` theme for render HTML document.
+* using `Twitter Bootstrap <http://twitter.github.com/bootstrap/>`_.
+* support Responsive Design.
+* change the layout flexibility.
+* `Google Web Fonts <http://www.google.com/webfonts>`_ available.
 
 
 Set up
@@ -32,8 +36,12 @@ Requirement
 ===========
 * Python 2.7 or later (not support 3.x)
 * Sphinx 1.1.x or later.
-* sphinx.themecore 0.1.3 or later.
+* sphinxjp.themecore 0.1.3 or later
 
+Using 
+===========
+* Twitter Bootstrap 2.2.2
+* jQuery 1.8.3
 
 License
 =======

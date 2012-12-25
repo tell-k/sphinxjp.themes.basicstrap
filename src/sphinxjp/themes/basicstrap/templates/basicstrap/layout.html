@@ -42,13 +42,13 @@
 </div>
 {%- endmacro %}
 
-{%- macro sidebar() %}
+{%- macro sidebar(for_mobile=False) %}
 {%- if render_sidebar %}
 <div class="span{{ theme_sidebar_span }}">
-  {%- if (not theme_noresponsive|tobool) %}
-  <a class="visible-phone btn btn-small show-sidebar" data-toggle="collapse" data-target=".sidebar">Show Siderbar Content</a>
+  {%- if (for_mobile|tobool) and (not theme_noresponsive|tobool) %}
+  <a class="visible-phone btn btn-small show-sidebar" data-toggle="collapse" data-target=".sidebar">Open Siderbar</a>
   {%- endif %}
-  <div class="sidebar hidden-phone">
+  <div class="{% if (for_mobile|tobool) %}for-mobile{% endif %} sidebar hidden-phone">
     {%- block sidebarlogo %}
     {%- if logo %}
     <p class="logo"><a href="{{ pathto(master_doc) }}">
@@ -104,13 +104,18 @@
 {%- endfor %}
 <script type="text/javascript">
   $(document).ready(function(){
-      $('.show-sidebar').click(function(e) {
-        e.preventDefault();
-        if ($('.sidebar').hasClass('hidden-phone')) {
-        $('.sidebar').removeClass('hidden-phone');
-        }
-        });
-      });
+    $('.show-sidebar').click(function(e) {
+       e.preventDefault();
+       if ($('.for-mobile').hasClass('hidden-phone')) {
+         $('.for-mobile').removeClass('hidden-phone');
+       }
+       if ($(".for-mobile").css("display") == "block") {
+          $(".show-sidebar").html("Close Sidebar");
+       } else {
+          $(".show-sidebar").html("Open Sidebar");
+       }
+    });
+  });
 </script>
 {%- endmacro %}
 
@@ -124,15 +129,7 @@
     padding-top: 60px;
     padding-bottom: 40px;
   }
-
-  {%- if (theme_googlewebfont|tobool) %}
-  h1, h2, h3, h4, h5, h6 {
-    {{ theme_googlewebfont_style }}
-  }
-  {%- endif %}
 }
-
-
 </style>
 {%- if (not theme_noresponsive|tobool) %}
 <link rel="stylesheet" href="{{ pathto('_static/css/bootstrap-responsive.min.css', 1) }}" type="text/css" />
@@ -143,20 +140,6 @@
 {%- for cssfile in css_files %}
 <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
 {%- endfor %}
-<style type="text/css">
-  @media (min-width: 768px) {
-    {% if theme_nav_fixed %}
-    .navbar-inner div.container {
-      width: {{ theme_nav_width }};
-    }
-    {% endif %}
-    {% if theme_content_fixed %}
-    div.container {
-      width: {{ theme_content_width }};
-    }
-    {% endif %}
-  }
-</style>
 {%- endmacro %}
 
 <html lang="{{ theme_lang }}">
@@ -240,12 +223,16 @@
     </div>
     {% endblock %}
 
-    <!-- container fluid -->
+    <!-- container -->
     <div class="{% if (not theme_content_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
 
-      <!-- row-fluid -->
+      <!-- row -->
       <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">
         {%- block content %}
+
+        {%- block sidebar_for_mobile %}
+          {{ sidebar(for_mobile=True) }}
+        {% endblock %}
 
         {%- block sidebar1 %}
         {% if (not theme_rightsidebar|tobool) %} {{ sidebar() }} {% endif %}
@@ -274,14 +261,12 @@
         {% endblock %}
 
         {%- endblock %}{# /content block #}
-      </div>
-      <!-- /row-fluid -->
+      </div><!-- /row -->
 
-      <!-- row-fluid -->
+      <!-- row -->
       <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">
         {%- block relbar2 %}{{ relbar() }}{% endblock %}
-      </div>
-      <!-- /row-fluid -->
+      </div><!-- /row -->
 
       <!-- footer -->
       {%- block footer %}
@@ -304,7 +289,7 @@
       <!-- /footer -->
 
     </div>
-    <!-- /container fluid -->
+    <!-- /container -->
 
   </body>
 </html>
