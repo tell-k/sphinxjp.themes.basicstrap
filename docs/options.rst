@@ -50,8 +50,8 @@ HTML theme options
 :googlewebfont_style:
    Set the Style of Google Web Font's CSS. Defaults to 'font-family: 'Carrois Gothic', sans-serif;'
 
-:header_navbar_inverse:
+:header_inverse:
    Set 'navbar-inverse' attribute to header navbar. Defaults to false.
 
-:relbar_navbar_inverse:
+:relbar_inverse:
    Set 'navbar-inverse' attribute to relbar navbar. Defaults to false.

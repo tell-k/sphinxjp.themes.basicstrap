@@ -24,7 +24,7 @@
 {%- endif %}
 
 {%- macro relbar() %}
-<div class="related navbar {% if (relbar_navbar_inverse|tobool) %}navbar-inverse{% endif %}">
+<div class="related navbar {% if (theme_relbar_inverse|tobool) %}navbar-inverse{% endif %}">
   <div class="navbar-inner">
     <ul class="nav pull-right">
       {%- for rellink in rellinks %}
@@ -193,7 +193,7 @@
   <body>
 
     {%- block header %}
-    <div class="navbar navbar-fixed-top {% if (header_navbar_inverse|tobool) %}navbar-inverse{% endif %}">
+    <div class="navbar navbar-fixed-top {% if (theme_header_inverse|tobool) %}navbar-inverse{% endif %}">
       <div class="navbar-inner">
         <div class="{% if (not theme_nav_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">

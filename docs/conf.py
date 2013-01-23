@@ -31,4 +31,6 @@ html_theme_options = {
     'googlewebfont': False,
     'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Carrois+Gothic',
     'googlewebfont_style': "font-family: 'Carrois Gothic', sans-serif;",
+    'header_inverse': True,
+    'relbar_inverse': False,
 }
