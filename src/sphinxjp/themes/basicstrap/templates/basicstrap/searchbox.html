@@ -8,7 +8,7 @@
     :license: MIT Licence, see LICENSE for details.
 #}
 {%- if pagename != "search" %}
-<div id="searchbox" style="display: none">
+<div id="searchbox">
   <h3>{{ _('Quick search') }}</h3>
   <form class="search form-search" action="{{ pathto('search') }}" method="get">
       <div class="input-append">
@@ -22,5 +22,4 @@
     {{ _('Enter search terms or a module, class or function name.') }}
     </p>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
 {%- endif %}
