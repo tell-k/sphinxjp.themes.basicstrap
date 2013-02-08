@@ -232,9 +232,12 @@
     <!-- container -->
     <div class="{% if (not theme_content_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
 
+
+      {% if not theme_noresponsive|tobool %}
       <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %} hidden-desktop hidden-tablet">
       {{ sidebar(for_mobile=True) }}
       </div>
+      {% endif %}
 
       <!-- row -->
       <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">

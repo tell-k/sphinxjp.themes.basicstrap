@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 """
-    sphinxjp.themes.basicstrap.directives
+    publishers.account.views
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    :author: tell-k <ffk2005@gmail.com>
-    :copyright: tell-k. All Rights Reserved.
+    :author: teruhiko kida <teruhiko.kida@beproud.jp>
+    :copyright: Be Proud Inc. All Rights Reserved.
 """
 from docutils import nodes, utils
 from docutils.parsers.rst.roles import set_classes
 
 def fonticon_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
-    """Create Font Icon Tag.
+    """Link to a BitBucket issue.
+
+    Returns 2 part tuple containing list of nodes to insert into the
+    document and a list of system messages.  Both are allowed to be
+    empty.
 
     :param name: The role name used in the document.
     :param rawtext: The entire markup snippet, with role.
@@ -20,11 +24,14 @@ def fonticon_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     :param options: Directive options for customization.
     :param content: The directive content for customization.
     """
+
+    #app.info('issue %r' % text)
     set_classes(options)
     options['classes']=["icon"]
     for icon in text.split(" "):
         options['classes'].append(icon)
-    return [nodes.inline('', '', **options)], []
+    node = nodes.inline('', '', **options)
+    return [node], []
 
 def setup(app):
     """Initialize
