@@ -45,13 +45,19 @@ HTML theme options
    Enable Google Web Font. Defaults to false
 
 :googlewebfont_url:
-   Set the URL of Google Web Font's CSS. Defaults to 'http://fonts.googleapis.com/css?family=Carrois+Gothic'
+   Set the URL of Google Web Font's CSS. Defaults to 'http://fonts.googleapis.com/css?family=Text+Me+One'
 
 :googlewebfont_style:
-   Set the Style of Google Web Font's CSS. Defaults to 'font-family: 'Carrois Gothic', sans-serif;'
+   Set the Style of Google Web Font's CSS. Defaults to "font-family: 'Text Me One', sans-serif;"
 
 :header_inverse:
    Set 'navbar-inverse' attribute to header navbar. Defaults to false.
 
 :relbar_inverse:
    Set 'navbar-inverse' attribute to relbar navbar. Defaults to false.
+
+:inner_theme:
+   Enable inner theme by Bootswatch. Defaults to false
+
+:inner_theme_name:
+   Set the Name of Bootswatch Style. Defaults to 'bootswatch-ameria'

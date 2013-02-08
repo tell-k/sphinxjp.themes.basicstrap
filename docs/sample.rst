@@ -1,9 +1,11 @@
-=================
+====================================================
  Sample Document
-=================
+====================================================
+
+.. contents::
 
 Admonitions (Docutils origin)
-=============================
+===============================================================================
 
 .. danger::
    This is sample of admonition directive for "Danger".
@@ -46,9 +48,12 @@ Admonitions (Sphinx Additional)
    Here is description of specification which changed on that version.
 
 .. code-block:: python
-   import zen
 
-Table
+   >>> from fibo import fib, fib2
+   >>> fib(500)
+   1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+Tables
 ===============================
 
 +------------------------+------------+----------+----------+
@@ -60,13 +65,3 @@ Table
 | body row 2             | ...        | ...      |          |
 +------------------------+------------+----------+----------+
 
-=====  =====  =======
-A      B      A and B
-=====  =====  =======
-False  False  False
-True   False  False
-False  True   False
-True   True   True
-=====  =====  =======
-
-.. END

@@ -42,8 +42,10 @@ setup(
     ],
     entry_points="""
         [sphinx_themes]
-        path = sphinxjp.themes.basicstrap:template_path
+        path = sphinxjp.themes.basicstrap:get_path
 
+        [sphinx_directives]
+        path = sphinxjp.themes.basicstrap:setup_directives
     """,
     zip_safe=False,
 )

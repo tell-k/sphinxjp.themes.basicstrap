@@ -121,11 +121,16 @@
 {%- if (theme_googlewebfont|tobool) %}
 <link rel="stylesheet" href="{{ pathto(theme_googlewebfont_url, 1) }}" type="text/css" />
 {%- endif %}
+<link rel="stylesheet" href="{{ pathto('_static/css/basicstrap-base.css', 1) }}" type="text/css" />
 {%- if (theme_inner_theme|tobool) %}
 <link rel="stylesheet" href="{{ pathto('_static/css/' + theme_inner_theme_name + '.css', 1) }}" type="text/css" />
 {%- else %}
 <link rel="stylesheet" href="{{ pathto('_static/css/bootstrap.min.css', 1) }}" type="text/css" />
 {%- endif %}
+<link rel="stylesheet" href="{{ pathto('_static/css/font-awesome.min.css', 1) }}">
+<!--[if IE 7]>
+<link rel="stylesheet" href="{{ pathto('_static/css/font-awesome-ie7.min.css', 1) }}">
+<![endif]-->
 <style type="text/css">
   body {
     padding-top: 60px;
@@ -133,7 +138,6 @@
   }
 }
 </style>
-<link rel="stylesheet" href="{{ pathto('_static/css/basicstrap-base.css', 1) }}" type="text/css" />
 <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
 <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
 {%- for cssfile in css_files %}

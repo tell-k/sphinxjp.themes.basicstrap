@@ -18,7 +18,7 @@ html_theme = 'basicstrap'
 # -- HTML theme options for `dotted` style -------------------------------------
 
 html_theme_options = {
-    'lang': 'ja',
+    'lang': 'en',
     'nosidebar': False,
     'rightsidebar': False,
     'sidebar_span': 3,
@@ -29,8 +29,10 @@ html_theme_options = {
     'row_fixed': False,
     'noresponsive': False,
     'googlewebfont': False,
-    'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Carrois+Gothic',
-    'googlewebfont_style': "font-family: 'Carrois Gothic', sans-serif;",
-    'header_inverse': True,
+    'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Text+Me+One',
+    'googlewebfont_style': "font-family: 'Text Me One', sans-serif",
+    'header_inverse': False,
     'relbar_inverse': False,
+    'inner_theme': False,
+    'inner_theme_name': 'bootswatch-united',
 }

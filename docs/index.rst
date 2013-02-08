@@ -49,5 +49,6 @@ Contents
 
     readme
     options
+    design
     sample
     history
