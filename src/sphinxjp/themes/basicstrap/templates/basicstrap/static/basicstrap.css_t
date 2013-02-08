@@ -1,10 +1,6 @@
 /*  Bootstrap
     ------------------------------------------------------- */
 
-a.brand {
-  width: 75%;
-}
-
 /*  apply font awesome
     ------------------------------------------------------- */
 
@@ -479,6 +475,17 @@ div.topic {
 
 {% endif %}
 
+/* for mobile */
+@media (max-width: 480px) {
+  a.brand {
+    width: 80%;
+  }
+  searchbox .search-query {
+    width: 60%;
+  }
+}
+
+/* for desktop */
 @media (min-width: 768px) {
   {% if theme_nav_fixed %}
   .navbar-inner div.container {
