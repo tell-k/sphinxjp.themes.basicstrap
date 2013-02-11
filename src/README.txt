@@ -55,8 +55,8 @@ License
 =======
 
 * sphinxjp.themes.basicstrap Licensed under the `MIT license <http://www.opensource.org/licenses/mit-license.php>`_ .
-* Twitter Bootstrap is licensed under the `Apache license <https://github.com/twitter/bootstrap/blob/master/LICENSE>`_.
-* Bootswatch is licensed under the `Apache license <https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE>`_.
-* Font Awesome is licensed unde the `license <https://github.com/FortAwesome/Font-Awesome>`_.
+* `Twitter Bootstrap is licensed under the Apache license <https://github.com/twitter/bootstrap/blob/master/LICENSE>`_.
+* `Bootswatch is licensed under the Apache license <https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE>`_.
+* `Font Awesome is licensed unde the license <https://github.com/FortAwesome/Font-Awesome>`_.
 
 See the LICENSE file for specific terms.

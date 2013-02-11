@@ -167,7 +167,7 @@ Inner design theme
    :align: center
    :target: _images/bootswatch-amelia.png
 
-   Figure8: content fixed
+   Figure8: inner theme
 
 * avalible inner themes
 
@@ -203,7 +203,7 @@ Web Font
    :align: center
    :target: _images/webfont.png
 
-   Figure9: content fixed
+   Figure9: webfont
 
 Font Icon
 ========================
