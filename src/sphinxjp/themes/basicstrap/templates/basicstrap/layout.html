@@ -254,13 +254,13 @@
 
 
       {% if not theme_noresponsive|tobool %}
-      <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %} hidden-desktop hidden-tablet">
+      <div class="{% if (not theme_row_fixed|tobool) %}row-fluid{% else %}row{% endif %} hidden-desktop hidden-tablet">
       {{ sidebar(for_mobile=True) }}
       </div>
       {% endif %}
 
       <!-- row -->
-      <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">
+      <div class="{% if (not theme_row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">
         {%- block content %}
 
         {%- block sidebar1 %}
@@ -293,7 +293,7 @@
       </div><!-- /row -->
 
       <!-- row -->
-      <div class="{% if (not row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">
+      <div class="{% if (not theme_row_fixed|tobool) %}row-fluid{% else %}row{% endif %}">
         {%- block relbar2 %}{{ relbar() }}{% endblock %}
       </div><!-- /row -->
 

@@ -1,12 +1,12 @@
 History
 =======
 
-0.2.0(Feb 3, 2013)
+0.2.0(Feb 11, 2013)
 ---------------------
 * fixed bug `#1 "Quick Search" in the table of contents is missing <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/1>`_.
 * `#2 adding "navbar-inverse" option <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/4>`_.
-* integrated Bootswatch
-* integrated Font Awesome ver3.0
+* Integrated Bootswatch
+* Integrated Font Awesome ver3.0
 
 0.1.1 (Dec 26, 2012)
 ---------------------

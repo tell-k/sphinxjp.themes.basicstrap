@@ -34,5 +34,5 @@ html_theme_options = {
     'header_inverse': False,
     'relbar_inverse': False,
     'inner_theme': False,
-    'inner_theme_name': 'bootswatch-united',
+    'inner_theme_name': 'bootswatch-amelia',
 }

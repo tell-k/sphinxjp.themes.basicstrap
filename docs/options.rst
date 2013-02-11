@@ -12,7 +12,7 @@ HTML theme options
 ==================
 
 :lang:
-   Set the lang attribute of the html tag. Defaults to 'ja'
+   Set the lang attribute of the html tag. Defaults to 'en'
 
 :nosidebar:
    Disable to show the sidebar. Defaults to 'false'

@@ -33,6 +33,10 @@ and run::
 
     $ make html
 
+.. caution:: Caution when upgrading from 0.1.1 to 0.2.0
+
+ * In version 0.1.1, the header color was black in the default, it has become white in 0.2.0. 
+ * If you like the black color header, please set to True the 'header_inverse' option. 
 
 Requirement
 ===========
@@ -49,16 +53,10 @@ Using
 
 License
 =======
-sphinxjp.themes.basicstrap Licensed under the `MIT license <http://www.opensource.org/licenses/mit-license.php>`_ .
 
-Twitter Bootstrap is licensed under the `Apache license <https://github.com/twitter/bootstrap/blob/master/LICENSE>`_.
-
-Bootswatch is licensed under the `Apache license <https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE>`_.
-
-Font Awesomeis licensed unde the `license <https://github.com/FortAwesome/Font-Awesome>`_.
-
-* The Font Awesome font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
-* Font Awesome CSS, LESS, and SASS files are licensed under the MIT License - http://opensource.org/licenses/mit-license.html
-* The Font Awesome pictograms are licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
+* sphinxjp.themes.basicstrap Licensed under the `MIT license <http://www.opensource.org/licenses/mit-license.php>`_ .
+* Twitter Bootstrap is licensed under the `Apache license <https://github.com/twitter/bootstrap/blob/master/LICENSE>`_.
+* Bootswatch is licensed under the `Apache license <https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE>`_.
+* Font Awesome is licensed unde the `license <https://github.com/FortAwesome/Font-Awesome>`_.
 
 See the LICENSE file for specific terms.
