@@ -184,6 +184,7 @@ Inner design theme
  * bootswatch-spruce
  * bootswatch-superhero
  * bootswatch-united
+ * bootswatch-flatly
  * geo-bootstrap
 
 Web Font

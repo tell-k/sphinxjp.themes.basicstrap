@@ -2,6 +2,8 @@
  conf.py sample
 ================
 
+.. _sample_conf:
+
 Sample
 ======
 

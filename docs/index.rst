@@ -33,6 +33,8 @@ and run:
 
 then your will get this page's style HTML output.
 
+In this document "inner_theme: geo-bootstrap" is set. see also :ref:`sample_conf`
+
 
 Links
 =====
