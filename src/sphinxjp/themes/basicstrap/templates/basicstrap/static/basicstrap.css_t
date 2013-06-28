@@ -40,6 +40,24 @@ div.tip p.admonition-title:before {
   content: "\f0eb";
 }
 
+{%- if theme_h1_size != '' %}
+h1 { font-size: {{ theme_h1_size }}; }
+{% endif %}
+{%- if theme_h2_size != '' %}
+h2 { font-size: {{ theme_h2_size }}; }
+{% endif %}
+{%- if theme_h3_size != '' %}
+h3 { font-size: {{ theme_h3_size }}; }
+{% endif %}
+{%- if theme_h4_size != '' %}
+h4 { font-size: {{ theme_h4_size }}; }
+{% endif %}
+{%- if theme_h5_size != '' %}
+h5 { font-size: {{ theme_h5_size }}; }
+{% endif %}
+{%- if theme_h6_size != '' %}
+h6 { font-size: {{ theme_h6_size }}; }
+{% endif %}
 
 {%- if (theme_googlewebfont|tobool) %}
 body,
@@ -62,8 +80,10 @@ h6 small,
 .navbar,
 .navbar-search .search-query,
 .navbar .navbar-search .search-query,
+/* 
 .navbar .search-query::-moz-placeholder,
 .navbar .search-query::-webkit-input-placeholder,
+*/
 .navbar .brand,
 .navbar .nav>li>a,
 .navbar .navbar-text,
@@ -429,6 +449,66 @@ div.navbar-inner ul.pull-right li a{
     {% set hint_background_color = "#e7b8d1" %}
     {% set hint_border_color  = "#de9ecb" %}
 
+{%- elif theme_inner_theme_name == 'bootswatch-flatly' %}
+
+    {% set table_border_color = "#dddddd" %}
+    {% set table_oddrow_color = "#f9f9f9" %}
+    {% set table_hover_color  = "#f5f5f5" %}
+
+    {% set danger_color = "#ffffff" %}
+    {% set danger_background_color = "#dd4838" %}
+    {% set danger_border_color  = "#dd4838" %}
+
+    {% set warning_color = "#ffffff" %}
+    {% set warning_background_color = "#ec9B00" %}
+    {% set warning_border_color  = "#ec9B00" %}
+
+    {% set note_color = "#ffffff" %}
+    {% set note_background_color = "#40bc9c" %}
+    {% set note_border_color  = "#40bc9c" %}
+
+    {% set hint_color = "#ffffff" %}
+    {% set hint_background_color = "#4b99dc" %}
+    {% set hint_border_color  = "#4b99dc" %}
+
+{%- elif theme_inner_theme_name == 'geo-bootstrap' %}
+
+table.docutils {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+div.admonition {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+div.topic {
+  background: url("./img/stars.gif") !important;
+}
+
+    {% set table_border_color = "#228000" %}
+    {% set table_oddrow_color = "#000000" %}
+    {% set table_hover_color  = "#2812FF" %}
+
+    {% set danger_color = "#ffffff" %}
+    {% set danger_background_color = "#f40000" %}
+    {% set danger_border_color  = "#a20000" %}
+
+    {% set warning_color = "#000000" %}
+    {% set warning_background_color = "#fcfe00" %}
+    {% set warning_border_color  = "#f40000" %}
+
+    {% set note_color = "#ffffff" %}
+    {% set note_background_color = "#228000" %}
+    {% set note_border_color  = "#2faa00" %}
+
+    {% set hint_color = "#000000" %}
+    {% set hint_background_color = "#57ffff" %}
+    {% set hint_border_color  = "#a8a900" %}
+
+
 {%- endif %}
 
 
@@ -458,6 +538,9 @@ table.docutils tbody tr:nth-child(odd) th {
 table.docutils tbody tr:hover td,
 table.docutils tbody tr:hover th {
   background-color: {{ table_hover_color }};
+}
+table.docutils.field-list {
+  border: none;
 }
 
 

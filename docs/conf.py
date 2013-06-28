@@ -6,16 +6,16 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = u'sphinx theme for basicstrap style'
-copyright = u'2012, tell-k'
+copyright = u'2013, tell-k'
 
-version = '0.1.0'
+version = '0.3.0'
 
 # -- Options for HTML output ---------------------------------------------------
 
 extensions = ['sphinxjp.themecore']
 html_theme = 'basicstrap'
 
-# -- HTML theme options for `dotted` style -------------------------------------
+# -- HTML theme options for `basicstrap` style -------------------------------------
 
 html_theme_options = {
     'lang': 'en',
@@ -29,10 +29,16 @@ html_theme_options = {
     'row_fixed': False,
     'noresponsive': False,
     'googlewebfont': False,
-    'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Text+Me+One',
-    'googlewebfont_style': "font-family: 'Text Me One', sans-serif",
+    'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Lily+Script+One',
+    'googlewebfont_style': u"font-family: 'Lily Script One' cursive;",
     'header_inverse': False,
     'relbar_inverse': False,
-    'inner_theme': False,
-    'inner_theme_name': 'bootswatch-amelia',
+    'inner_theme': True,
+    'inner_theme_name': 'geo-bootstrap',
+    'h1_size': '3.0em',
+    'h2_size': '2.6em',
+    'h3_size': '2.2em',
+    'h4_size': '1.8em',
+    'h5_size': '1.4em',
+    'h6_size': '1.1em',
 }

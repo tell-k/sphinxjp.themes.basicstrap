@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 import os, sys
 
-version = '0.2.0'
+version = '0.3.0'
 long_description = '\n'.join([
         open(os.path.join("src", "README.txt")).read(),
         open(os.path.join("src", "AUTHORS.txt")).read(),
@@ -21,7 +21,7 @@ classifiers = [
 setup(
     name='sphinxjp.themes.basicstrap',
     version=version,
-    description='A sphinx theme for Basicstrap style.',
+    description='A sphinx theme for Basicstrap style. Using Twitter Bootstrap.',
     long_description=long_description,
     classifiers=classifiers,
     keywords=['sphinx', 'reStructuredText', 'theme'],

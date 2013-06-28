@@ -126,8 +126,8 @@ Inverse color
 
 .. caution:: Caution when upgrading from 0.1.1 to 0.2.0
 
-   * In version 0.1.1, the header color was black in the default, it has become white in 0.2.0. 
-   * If you like the black color header, please set to True the 'header_inverse' option. 
+   * In version 0.1.1, the header color was black in the default, it has become white in 0.2.0.
+   * If you like the black color header, please set to True the 'header_inverse' option.
 
 
 Responsive design
@@ -152,7 +152,8 @@ If you want to quit Responsive design, please set to True "noresponsive" option.
 Inner design theme
 ========================
 
-`Bootswatch <http://bootswatch.com/>`_ design themes are available.
+* `Bootswatch <http://bootswatch.com/>`_ design themes are available.
+* `Geo <http://divshot.github.io/geo-bootstrap/>`_ design themes are available.
 
 ::
 
@@ -183,6 +184,7 @@ Inner design theme
  * bootswatch-spruce
  * bootswatch-superhero
  * bootswatch-united
+ * geo-bootstrap
 
 Web Font
 ========================

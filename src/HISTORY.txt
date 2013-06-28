@@ -1,19 +1,29 @@
 History
 =======
 
+0.3.0(Jun 28, 2013)
+---------------------
+* Fixed bug `#5 "Goolgle Web Font" is not reflected <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/5>`_.
+* Update Twitter Bootstrap ver2.3.2
+* Update Bootswatch Theme for Twitter Bootstrap ver2.3.2
+* Update Font Awesome ver3.2.1
+* Add new Innner Theme `bootswatch-flatly <http://bootswatch.com/flatly/>`_ from Bootswatch.
+* Add new Innner Theme `geo-bootstrap <http://divshot.github.io/geo-bootstrap/>`_.
+* Add new option of html_theme_optios. 'h1_size' 〜 'h6_size'.
+
 0.2.0(Feb 11, 2013)
 ---------------------
-* fixed bug `#1 "Quick Search" in the table of contents is missing <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/1>`_.
+* Fixed bug `#1 "Quick Search" in the table of contents is missing <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/1>`_.
 * `#2 adding "navbar-inverse" option <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/4>`_.
 * Integrated Bootswatch
 * Integrated Font Awesome ver3.0
 
 0.1.1 (Dec 26, 2012)
 ---------------------
-* adjust css
-* update Twitter Bootstrap ver2.2.2
-* update jQuery ver1.8.3
+* Adjust css
+* Update Twitter Bootstrap ver2.2.2
+* Update jQuery ver1.8.3
 
 0.1.0 (Dec 23, 2012)
 ---------------------
-* first release
+* First release

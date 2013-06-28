@@ -61,3 +61,6 @@ HTML theme options
 
 :inner_theme_name:
    Set the Name of Bootswatch Style. Defaults to 'bootswatch-ameria'
+
+:h1_size(〜 h6_size):
+   Set the Size of Heading text. Defaults to None
