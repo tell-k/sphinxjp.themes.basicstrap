@@ -129,7 +129,7 @@
 
 {%- macro css() %}
 {%- if (theme_googlewebfont|tobool) %}
-<link rel="stylesheet" href="{{ pathto(theme_googlewebfont_url, 1) }}" type="text/css" />
+<link rel="stylesheet" href="{{ pathto(theme_googlewebfont_url, 1) }}" media="screen and (min-width:481px)" type="text/css" />
 {%- endif %}
 <link rel="stylesheet" href="{{ pathto('_static/css/basicstrap-base.css', 1) }}" type="text/css" />
 {%- if (theme_inner_theme|tobool) %}

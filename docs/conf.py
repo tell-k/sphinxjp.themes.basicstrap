@@ -8,7 +8,7 @@ master_doc = 'index'
 project = u'sphinx theme for basicstrap style'
 copyright = u'2013, tell-k'
 
-version = '0.3.0'
+version = '0.3.1'
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -34,11 +34,11 @@ html_theme_options = {
     'header_inverse': False,
     'relbar_inverse': False,
     'inner_theme': True,
-    'inner_theme_name': 'geo-bootstrap',
-    'h1_size': '3.0em',
-    'h2_size': '2.6em',
-    'h3_size': '2.2em',
-    'h4_size': '1.8em',
-    'h5_size': '1.4em',
-    'h6_size': '1.1em',
+    'inner_theme_name': 'bootswatch-flatly',
+#    'h1_size': '3.0em',
+#    'h2_size': '2.6em',
+#    'h3_size': '2.2em',
+#    'h4_size': '1.8em',
+#    'h5_size': '1.4em',
+#    'h6_size': '1.1em',
 }

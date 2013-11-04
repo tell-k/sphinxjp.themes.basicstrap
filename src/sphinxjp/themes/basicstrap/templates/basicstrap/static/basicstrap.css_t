@@ -41,22 +41,22 @@ div.tip p.admonition-title:before {
 }
 
 {%- if theme_h1_size != '' %}
-h1 { font-size: {{ theme_h1_size }}; }
+h1 { font-size: {{ theme_h1_size }}; line-height: {{ theme_h1_size }};}
 {% endif %}
 {%- if theme_h2_size != '' %}
-h2 { font-size: {{ theme_h2_size }}; }
+h2 { font-size: {{ theme_h2_size }}; line-height: {{ theme_h2_size }};}
 {% endif %}
 {%- if theme_h3_size != '' %}
-h3 { font-size: {{ theme_h3_size }}; }
+h3 { font-size: {{ theme_h3_size }}; line-height: {{ theme_h3_size }};}
 {% endif %}
 {%- if theme_h4_size != '' %}
-h4 { font-size: {{ theme_h4_size }}; }
+h4 { font-size: {{ theme_h4_size }}; line-height: {{ theme_h4_size }};}
 {% endif %}
 {%- if theme_h5_size != '' %}
-h5 { font-size: {{ theme_h5_size }}; }
+h5 { font-size: {{ theme_h5_size }}; line-height: {{ theme_h5_size }};}
 {% endif %}
 {%- if theme_h6_size != '' %}
-h6 { font-size: {{ theme_h6_size }}; }
+h6 { font-size: {{ theme_h6_size }}; line-height: {{ theme_h6_size }};}
 {% endif %}
 
 {%- if (theme_googlewebfont|tobool) %}
@@ -80,7 +80,7 @@ h6 small,
 .navbar,
 .navbar-search .search-query,
 .navbar .navbar-search .search-query,
-/* 
+/*
 .navbar .search-query::-moz-placeholder,
 .navbar .search-query::-webkit-input-placeholder,
 */
@@ -543,6 +543,9 @@ table.docutils.field-list {
   border: none;
 }
 
+table.width-adjust {
+  width: 0;
+}
 
 /* -- admonition -- */
 div.admonition {

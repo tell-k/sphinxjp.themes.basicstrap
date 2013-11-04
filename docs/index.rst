@@ -33,7 +33,7 @@ and run:
 
 then your will get this page's style HTML output.
 
-In this document "inner_theme: geo-bootstrap" is set. see also :ref:`sample_conf`
+In this document "inner_theme_name: bootswatch-flatly" is set. see also :ref:`sample_conf`
 
 
 Links
