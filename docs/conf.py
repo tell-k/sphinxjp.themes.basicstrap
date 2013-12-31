@@ -12,7 +12,7 @@ version = '0.3.1'
 
 # -- Options for HTML output ---------------------------------------------------
 
-extensions = ['sphinxjp.themecore']
+extensions += ['sphinxjp.themes.basicstrap']
 html_theme = 'basicstrap'
 
 # -- HTML theme options for `basicstrap` style -------------------------------------

@@ -36,10 +36,11 @@ setup(
     include_package_data=True,
     install_requires=[
         'setuptools',
-        'docutils',
-        'Sphinx',
-        'sphinxjp.themecore',
+        'sphinx'
     ],
+    test_suite='nose.collector',
+    tests_require=['Nose','pep8'],
+    extras_require=dict(test=['Nose','pep8']),
     entry_points="""
         [sphinx_themes]
         path = sphinxjp.themes.basicstrap:get_path

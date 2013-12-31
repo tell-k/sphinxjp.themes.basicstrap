@@ -15,10 +15,10 @@ template_path = path.join(package_dir, 'templates')
 
 
 def get_path():
-    """entry-point for sphinxjp.themecore theme."""
+    """entry-point for theme."""
     return template_path
 
 
 def setup_directives(app):
-    """entry-point for sphinxjp.themecore directive."""
+    """entry-point for sphinx directive."""
     directives.setup(app)

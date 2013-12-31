@@ -1,0 +1,2 @@
+Sphinx==1.2b3
+sphinxjp.themes.basicstrap==0.3.1
