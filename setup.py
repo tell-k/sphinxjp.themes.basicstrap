@@ -23,7 +23,7 @@ classifiers = [
 setup(
     name='sphinxjp.themes.basicstrap',
     version=version,
-    description='A sphinx theme for Basicstrap style. Using Twitter Bootstrap.',
+    description='A sphinx theme for Basicstrap style. Using Twitter Bootstrap. #sphinxjp',
     long_description=long_description,
     classifiers=classifiers,
     keywords=['sphinx', 'reStructuredText', 'theme'],
@@ -38,7 +38,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'setuptools',
-        'sphinx'
+        'sphinx',
     ],
     test_suite='nose.collector',
     tests_require=['Nose','pep8'],
@@ -48,7 +48,7 @@ setup(
         path = sphinxjp.themes.basicstrap:get_path
 
         [sphinx_directives]
-        path = sphinxjp.themes.basicstrap:setup
+        setup = sphinxjp.themes.basicstrap:setup
     """,
     zip_safe=False,
 )
