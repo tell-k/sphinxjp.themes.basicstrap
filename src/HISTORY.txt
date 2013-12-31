@@ -1,6 +1,12 @@
 History
 =======
 
+0.3.2(Dec 31, 2013)
+---------------------
+
+* Add tox test.
+* Python3 support.
+
 0.3.1(Nov 4, 2013)
 ---------------------
 * Update stylesheet for 'h1_size' 〜 'h6_size' options.

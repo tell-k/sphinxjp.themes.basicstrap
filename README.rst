@@ -1,5 +1,7 @@
 Basicstrap style theme for Sphinx. Using Twitter Bootstrap.
 
+.. image:: https://drone.io/github.com/tell-k/sphinxjp.themes.basicstrap/status.png
+
 Features
 ========
 * Provide ``basicstrap`` theme for render HTML document.

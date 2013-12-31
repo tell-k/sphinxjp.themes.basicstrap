@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 import os, sys
 
-version = '0.3.1'
+version = '0.3.2'
 long_description = '\n'.join([
         open(os.path.join("src", "README.txt")).read(),
         open(os.path.join("src", "AUTHORS.txt")).read(),
@@ -13,6 +13,8 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 3",
     "Topic :: Software Development",
     "Topic :: Software Development :: Documentation",
     "Topic :: Text Processing :: Markup",
