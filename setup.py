@@ -46,7 +46,7 @@ setup(
         path = sphinxjp.themes.basicstrap:get_path
 
         [sphinx_directives]
-        path = sphinxjp.themes.basicstrap:setup_directives
+        path = sphinxjp.themes.basicstrap:setup
     """,
     zip_safe=False,
 )

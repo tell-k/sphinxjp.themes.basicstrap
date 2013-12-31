@@ -19,6 +19,6 @@ def get_path():
     return template_path
 
 
-def setup_directives(app):
+def setup(app):
     """entry-point for sphinx directive."""
     directives.setup(app)
