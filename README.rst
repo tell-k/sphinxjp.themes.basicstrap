@@ -43,7 +43,7 @@ and run::
 
 Requirement
 ===========
-* Python 2.7 or later (not support 3.x)
+* Python 2.7 or later.
 * Sphinx 1.2.x or later.
 
 Using
