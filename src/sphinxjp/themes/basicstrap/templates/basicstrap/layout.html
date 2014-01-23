@@ -24,7 +24,7 @@
 {%- endif %}
 
 {%- macro relbar() %}
-<div class="related navbar {% if (theme_relbar_inverse|tobool) %}navbar-inverse{% endif %}">
+<div class="related navbar {% if (theme_relbar_inverse|tobool) %}navbar-inverse{% endif %}" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav pull-right">
       {% if not (theme_nosidebar|tobool) %}
@@ -58,7 +58,7 @@
   {%- if (for_mobile|tobool) and (not theme_noresponsive|tobool) %}
   <a class="visible-phone btn btn-small show-sidebar" data-toggle="collapse" data-target=".for-mobile">Open Table Of Contents</a>
   {%- endif %}
-  <div class="{% if (for_mobile|tobool) %}for-mobile{% endif %} sidebar hidden-phone">
+  <div class="{% if (for_mobile|tobool) %}for-mobile{% endif %} sidebar hidden-phone" role="navigation" aria-label="main navigation">
     {%- block sidebarlogo %}
     {%- if logo %}
     <p class="logo"><a href="{{ pathto(master_doc) }}">
@@ -141,6 +141,7 @@
 <!--[if IE 7]>
 <link rel="stylesheet" href="{{ pathto('_static/css/font-awesome-ie7.min.css', 1) }}">
 <![endif]-->
+{% if (theme_nav_fixed_top|tobool) %}
 <style type="text/css">
   body {
     padding-top: 60px;
@@ -148,6 +149,7 @@
   }
 }
 </style>
+{% endif %}
 <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
 <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
 {%- for cssfile in css_files %}
@@ -208,10 +210,10 @@
     {%- endblock %}
     {%- block extrahead %} {% endblock %}
   </head>
-  <body>
+  <body role="document">
 
     {%- block header %}
-    <div class="navbar navbar-fixed-top {% if (theme_header_inverse|tobool) %}navbar-inverse{% endif %}">
+    <div class="navbar {% if (theme_nav_fixed_top|tobool) %}navbar-fixed-top {% endif %}{% if (theme_header_inverse|tobool) %}navbar-inverse{% endif %}" role="navigation" aria-label="top navigation">
       <div class="navbar-inner">
         <div class="{% if (not theme_nav_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -219,7 +221,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>
+          <div role="banner">
+            <a class="brand" href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>
+          </div>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
               {% if not (theme_nosidebar|tobool) %}
@@ -268,7 +272,7 @@
         {% endblock %}
 
         <div class="{% if (not theme_nosidebar|tobool) %}span{{ 12 - theme_sidebar_span|int }}{% else %}span12{% endif %}">
-          <div class="document">
+          <div class="document" role="main">
             {%- block document %}
             <div class="documentwrapper">
               {%- if render_sidebar %}
@@ -299,7 +303,7 @@
 
       <!-- footer -->
       {%- block footer %}
-      <footer>
+      <footer role="contentinfo">
       {%- if show_copyright %}
         {%- if hasdoc('copyright') %}
           {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}

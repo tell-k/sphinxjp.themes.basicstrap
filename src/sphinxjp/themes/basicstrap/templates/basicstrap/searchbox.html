@@ -8,7 +8,7 @@
     :license: MIT Licence, see LICENSE for details.
 #}
 {%- if pagename != "search" %}
-<div id="searchbox">
+<div id="searchbox" role="search">
   <h3>{{ _('Quick search') }}</h3>
   <form class="search form-search" action="{{ pathto('search') }}" method="get">
       <div class="input-append">
