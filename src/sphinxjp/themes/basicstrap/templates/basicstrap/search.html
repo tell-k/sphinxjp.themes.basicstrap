@@ -38,6 +38,8 @@
     </div>
     <span id="search-progress" style="padding-left: 10px"></span>
   </form>
+
+  <div role="main">
   {% if search_performed %}
     <h2>{{ _('Search Results') }}</h2>
     {% if not search_results %}
@@ -54,5 +56,6 @@
     {% endfor %}
     </ul>
   {% endif %}
+  </div>
   </div>
 {% endblock %}
