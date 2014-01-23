@@ -141,6 +141,7 @@
 <!--[if IE 7]>
 <link rel="stylesheet" href="{{ pathto('_static/css/font-awesome-ie7.min.css', 1) }}">
 <![endif]-->
+{% if (theme_nav_fixed_top|tobool) %}
 <style type="text/css">
   body {
     padding-top: 60px;
@@ -148,6 +149,7 @@
   }
 }
 </style>
+{% endif %}
 <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
 <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
 {%- for cssfile in css_files %}
@@ -211,7 +213,7 @@
   <body>
 
     {%- block header %}
-    <div class="navbar navbar-fixed-top {% if (theme_header_inverse|tobool) %}navbar-inverse{% endif %}">
+    <div class="navbar {% if (theme_nav_fixed_top|tobool) %}navbar-fixed-top {% endif %}{% if (theme_header_inverse|tobool) %}navbar-inverse{% endif %}">
       <div class="navbar-inner">
         <div class="{% if (not theme_nav_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">

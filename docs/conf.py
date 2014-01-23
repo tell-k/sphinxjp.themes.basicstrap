@@ -22,6 +22,7 @@ html_theme_options = {
     'nosidebar': False,
     'rightsidebar': False,
     'sidebar_span': 3,
+    'nav_fixed_top': True,
     'nav_fixed': False,
     'nav_width': '900px',
     'content_fixed': False,
