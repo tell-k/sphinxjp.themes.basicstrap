@@ -1,7 +1,7 @@
 Basicstrap style theme for Sphinx. Using Twitter Bootstrap.
 
-.. image:: https://drone.io/github.com/tell-k/sphinxjp.themes.basicstrap/status.png
-   :target: https://drone.io/github.com/tell-k/sphinxjp.themes.basicstrap
+|travis| |downloads| |version| |license|
+
 
 Features
 ========
@@ -63,3 +63,23 @@ License
 * `Geo is licensed under the license <https://github.com/divshot/geo-bootstrap>`_
 
 See the LICENSE file for specific terms.
+
+.. |travis| image:: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap
+    :target: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap
+    :alt: travis-ci
+
+.. |coveralls| image:: https://coveralls.io/repos/tell-k/sphinxjp.themes.basicstrap
+    :target: https://coveralls.io/r/tell-k/sphinxjp.themes.basicstrap
+    :alt: coveralls.io
+
+.. |downloads| image:: https://pypip.in/d/sphinxjp.themes.basicstrap/badge.png
+    :target: http://pypi.python.org/pypi/sphinxjp.themes.basicstrap/
+    :alt: downloads
+
+.. |version| image:: https://pypip.in/v/sphinxjp.themes.basicstrap/badge.png
+    :target: http://pypi.python.org/pypi/sphinxjp.themes.basicstrap/
+    :alt: latest version
+
+.. |license| image:: https://pypip.in/license/sphinxjp.themes.basicstrap/badge.png
+    :target: http://pypi.python.org/pypi/sphinxjp.themes.basicstrap/
+    :alt: license

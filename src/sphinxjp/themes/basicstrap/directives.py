@@ -6,10 +6,12 @@
     :author: tell-k <ffk2005@gmail.com>
     :copyright: tell-k. All Rights Reserved.
 """
-from docutils import nodes, utils
+from docutils import nodes
 from docutils.parsers.rst.roles import set_classes
 
-def fonticon_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+
+def fonticon_role(name, rawtext, text, lineno,
+                  inliner, options={}, content=[]):
     """Create Font Icon Tag.
 
     :param name: The role name used in the document.
@@ -21,17 +23,16 @@ def fonticon_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     :param content: The directive content for customization.
     """
     set_classes(options)
-    options['classes']=["icon"]
+    options['classes'] = ["icon"]
     for icon in text.split(" "):
         options['classes'].append(icon)
     return [nodes.inline('', '', **options)], []
 
+
 def setup(app):
     """Initialize
-
     :param app: Sphinx application context.
     """
     app.info('Initializing Basicstrap theme directives')
     app.add_role('fonticon', fonticon_role)
     return
-
