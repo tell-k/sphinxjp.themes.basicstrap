@@ -64,7 +64,7 @@ License
 
 See the LICENSE file for specific terms.
 
-.. |travis| image:: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap
+.. |travis| image:: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap.svg?branch=master
     :target: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap
     :alt: travis-ci
 
