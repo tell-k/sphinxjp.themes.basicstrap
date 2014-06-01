@@ -10,7 +10,7 @@ env:
    - TOXENV=flake8
 install:
   - pip install tox
-  - if test "$TOXENV" = py34 ; then pip install python-coveralls ; fi
+  - if test "$TOXENV" = py34 ; then pip install coveralls ; fi
 script: tox
 after_script:
   - if test "$TOXENV" = py34 ; then coveralls ; fi
