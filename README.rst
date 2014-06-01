@@ -1,6 +1,6 @@
 Basicstrap style theme for Sphinx. Using Twitter Bootstrap.
 
-|travis| |downloads| |version| |license|
+|travis| |coveralls| |downloads| |version| |license|
 
 Features
 ========
