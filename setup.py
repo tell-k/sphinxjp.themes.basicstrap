@@ -41,8 +41,8 @@ setup(
         'sphinx',
     ],
     test_suite='nose.collector',
-    tests_require=['Nose','pep8'],
-    extras_require=dict(test=['Nose','pep8']),
+    tests_require=['nose','flake8', 'mock', 'coverage'],
+    extras_require=dict(test=['nose','flake8', 'mock', 'coverage']),
     entry_points="""
         [sphinx_themes]
         path = sphinxjp.themes.basicstrap:get_path
