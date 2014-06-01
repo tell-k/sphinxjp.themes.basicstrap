@@ -1,6 +1,6 @@
 Basicstrap style theme for Sphinx. Using Twitter Bootstrap.
 
-|travis| |downloads| |version| |license|
+|travis| |coveralls| |downloads| |version| |license|
 
 
 Features
@@ -68,7 +68,7 @@ See the LICENSE file for specific terms.
     :target: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap
     :alt: travis-ci
 
-.. |coveralls| image:: https://coveralls.io/repos/tell-k/sphinxjp.themes.basicstrap
+.. |coveralls| image:: https://coveralls.io/repos/tell-k/sphinxjp.themes.basicstrap/badge.png
     :target: https://coveralls.io/r/tell-k/sphinxjp.themes.basicstrap
     :alt: coveralls.io
 
