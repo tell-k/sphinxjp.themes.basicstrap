@@ -8,9 +8,9 @@ env:
   - TOX_ENV=py34
   - TOX_ENV=flake8
 install:
-  - pip install detox -f wheelhouse
+  - pip install tox -f wheelhouse
   - if test "$TOXENV" = py34 ; then pip install python-coveralls ; fi
 script:
-  - detox -e $TOX_ENV
+  - tox -e $TOX_ENV
 after_script:
   - if test "$TOXENV" = py34 ; then coveralls ; fi
