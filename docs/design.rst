@@ -39,7 +39,7 @@ Using `a Grid system of Twitter Bootstrap <http://twitter.github.com/bootstrap/s
 ::
 
   html_theme_options = {
-      'sidebar_span': 6, # 1(min) 〜 12(max)
+      'sidebar_span': 6, # 1(min) - 12(max)
   }
 
 .. figure:: _static/img/sidebar_span.png

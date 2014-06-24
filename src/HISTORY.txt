@@ -9,7 +9,7 @@ History
 
 0.3.1(Nov 4, 2013)
 ---------------------
-* Update stylesheet for 'h1_size' 〜 'h6_size' options.
+* Update stylesheet for 'h1_size' - 'h6_size' options.
 * Changed. When you visit in the smartphone, GoogleWeb fonts to not used.
 
 0.3.0(Jun 28, 2013)
@@ -20,7 +20,7 @@ History
 * Update Font Awesome ver3.2.1
 * Add new Innner Theme `bootswatch-flatly <http://bootswatch.com/flatly/>`_ from Bootswatch.
 * Add new Innner Theme `geo-bootstrap <http://divshot.github.io/geo-bootstrap/>`_.
-* Add new option of html_theme_optios. 'h1_size' 〜 'h6_size'.
+* Add new option of html_theme_optios. 'h1_size' - 'h6_size'.
 
 0.2.0(Feb 11, 2013)
 ---------------------
