@@ -8,5 +8,7 @@ Sphinx template, css, packaging
 Contributers
 -------------------------------
 
+great thanks.
+
 * pierre-rouanet
 * westurner
