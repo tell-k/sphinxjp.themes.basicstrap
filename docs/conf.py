@@ -6,9 +6,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = u'sphinx theme for basicstrap style'
-copyright = u'2013, tell-k'
+copyright = u'2014, tell-k'
 
-version = '0.3.2'
+version = '0.4.0'
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -23,23 +23,34 @@ html_theme_options = {
     'rightsidebar': False,
     'sidebar_span': 3,
     'nav_fixed_top': True,
+
     'nav_fixed': False,
     'nav_width': '900px',
+
     'content_fixed': False,
     'content_width': '900px',
+
     'row_fixed': False,
     'noresponsive': False,
+    'noflatdesign': False,
+
     'googlewebfont': False,
     'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Lily+Script+One',
     'googlewebfont_style': u"font-family: 'Lily Script One' cursive;",
+
     'header_inverse': False,
     'relbar_inverse': False,
+
     'inner_theme': True,
     'inner_theme_name': 'bootswatch-flatly',
-#    'h1_size': '3.0em',
-#    'h2_size': '2.6em',
-#    'h3_size': '2.2em',
-#    'h4_size': '1.8em',
-#    'h5_size': '1.4em',
-#    'h6_size': '1.1em',
+
+    'bootstrap_version': '3',
+    'quick_preview': True,
+
+    # 'h1_size': '3.0em',
+    # 'h2_size': '2.6em',
+    # 'h3_size': '2.2em',
+    # 'h4_size': '1.8em',
+    # 'h5_size': '1.4em',
+    # 'h6_size': '1.1em',
 }

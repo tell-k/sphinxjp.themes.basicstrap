@@ -31,10 +31,12 @@
     function will automatically search for all of the words. Pages
     containing fewer words won't appear in the result list.{% endtrans %}
   </p>
-  <form class="form-search" action="" method="get">
-    <div class="input-append">
-      <input type="text" class="search-query" name="q" value="">
+  <form class="form-search form-inline" action="" method="get">
+    <div class="input-append input-group">
+      <input type="text" class="search-query form-control" name="q" value="" placeholder="Search...">
+      <span class="input-group-btn">
       <input type="submit" class="btn" value="{{ _('search') }}" />
+      </span>
     </div>
     <span id="search-progress" style="padding-left: 10px"></span>
   </form>

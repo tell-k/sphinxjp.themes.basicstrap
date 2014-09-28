@@ -2,6 +2,17 @@
  Basicstrap style theme sample for Sphinx
 =============================================
 
+
+Quick preview inner theme
+===========================
+
+You can see the theme in real time If you select a theme.
+
+.. raw:: html
+
+ <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target=".debug-modal">launch quick preview window</a>
+
+
 Quick start
 ===========
 

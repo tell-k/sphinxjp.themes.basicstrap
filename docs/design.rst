@@ -172,20 +172,26 @@ Inner design theme
 
 * avalible inner themes
 
- * bootswatch-amelia
- * bootswatch-cerulean
- * bootswatch-cosmo
- * bootswatch-cyborg
- * bootswatch-journal
- * bootswatch-readable
- * bootswatch-simplex
- * bootswatch-slate
- * bootswatch-spacelab
- * bootswatch-spruce
- * bootswatch-superhero
- * bootswatch-united
- * bootswatch-flatly
- * geo-bootstrap
+  * bootswatch-amelia
+  * bootswatch-cerulean
+  * bootswatch-cosmo
+  * bootswatch-cyborg
+  * bootswatch-journal
+  * bootswatch-readable
+  * bootswatch-simplex
+  * bootswatch-slate
+  * bootswatch-spacelab
+  * bootswatch-paper (bootstrap_version 3 only)
+  * bootswatch-sandstone (bootstrap_version 3 only)
+  * bootswatch-spruce (bootstrap_version 2 only)
+  * bootswatch-superhero
+  * bootswatch-united
+  * bootswatch-darkly(bootstrap_version 3 only)
+  * bootswatch-flatly
+  * bootswatch-lumen (bootstrap_version 3 only)
+  * bootswatch-yeti(bootstrap_version 3 only)
+  * geo-bootstrap (bootstrap_version 2 only)
+
 
 Web Font
 ========================
@@ -208,6 +214,7 @@ Web Font
 
    Figure9: webfont
 
+
 Font Icon
 ========================
 
@@ -217,22 +224,20 @@ Please write in this format.
 
 ::
 
-  * :fonticon:`icon-home`
-  * :fonticon:`icon-home icon-large`
-  * :fonticon:`icon-home icon-muted`
-  * :fonticon:`icon-home icon-spin`
-  * :fonticon:`icon-home icon-border`
-  * :fonticon:`icon-home icon-border icon-2x`
-  * :fonticon:`icon-home icon-border icon-3x`
-  * :fonticon:`icon-home icon-border icon-4x`
+ * :fonticon:`fa fa-home`
+ * :fonticon:`fa fa-home fa-large`
+ * :fonticon:`fa fa-home fa-muted`
+ * :fonticon:`fa fa-home fa-spin`
+ * :fonticon:`fa fa-home fa-border`
+ * :fonticon:`fa fa-home fa-border icon-2x`
+ * :fonticon:`fa fa-home fa-border icon-3x`
+ * :fonticon:`fa fa-home fa-border icon-4x`
 
-
-* :fonticon:`icon-home`
-* :fonticon:`icon-home icon-large`
-* :fonticon:`icon-home icon-muted`
-* :fonticon:`icon-home icon-spin`
-* :fonticon:`icon-home icon-border`
-* :fonticon:`icon-home icon-border icon-2x`
-* :fonticon:`icon-home icon-border icon-3x`
-* :fonticon:`icon-home icon-border icon-4x`
-
+* :fonticon:`fa fa-home`
+* :fonticon:`fa fa-home fa-large`
+* :fonticon:`fa fa-home fa-muted`
+* :fonticon:`fa fa-home fa-spin`
+* :fonticon:`fa fa-home fa-border`
+* :fonticon:`fa fa-home fa-border fa-2x`
+* :fonticon:`fa fa-home fa-border fa-3x`
+* :fonticon:`fa fa-home fa-border fa-4x`

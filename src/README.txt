@@ -2,7 +2,6 @@ Basicstrap style theme for Sphinx. Using Twitter Bootstrap.
 
 |travis| |coveralls| |downloads| |version| |license|
 
-
 Features
 ========
 * Provide ``basicstrap`` theme for render HTML document.
@@ -48,10 +47,10 @@ Requirement
 
 Using
 ===========
-* Twitter Bootstrap 2.3.2
+* Twitter Bootstrap 3.1.1 and 2.3.2
 * jQuery 1.8.3
 * Bootswatch
-* Font Awesome 3.2.1
+* Font Awesome 4.3.1
 
 License
 =======
@@ -66,7 +65,7 @@ See the LICENSE file for specific terms.
 
 .. |travis| image:: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap.svg?branch=master
     :target: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap
-    :alt: travis-ci
+
 
 .. |coveralls| image:: https://coveralls.io/repos/tell-k/sphinxjp.themes.basicstrap/badge.png
     :target: https://coveralls.io/r/tell-k/sphinxjp.themes.basicstrap
