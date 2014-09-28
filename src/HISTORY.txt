@@ -6,15 +6,16 @@ History
 
 * `#8 Navbar hides initial content when jumping to in-page anchor <https://github.com/tell-k/sphinxjp.themes.basicstrap/pull/8>`_.
 * `#7 Added WAI-ARIA roles and optional navbar-fixed-top setting <https://github.com/tell-k/sphinxjp.themes.basicstrap/pull/7>`_.
-* New Support Twitter Bootstrap ver3.1.1
-* New Support Bootswatch Theme for Twitter Bootstrap ver3.1.1
+* New Support Twitter Bootstrap ver3.2.0
+* New Support Bootswatch Theme for Twitter Bootstrap ver3.2.0
 * Add new Innner Theme `bootswatch-darkly <http://bootswatch.com/darkly/>`_ from Bootswatch.
 * Add new Innner Theme `bootswatch-yeti <http://bootswatch.com/darkly/>`_ from Bootswatch.
 * Add new Innner Theme `bootswatch-paper <http://bootswatch.com/paper/>`_ from Bootswatch.
 * Add new Innner Theme `bootswatch-sandstone <http://bootswatch.com/sandstone/>`_ from Bootswatch.
 * Add new Innner Theme `bootswatch-lumen <http://bootswatch.com/lumen/>`_ from Bootswatch.
 * Improve menu for smartphone.
-* Update Font Awesome ver4.3.1
+* Update Font Awesome ver4.2.0
+* Remove bootstrap.py and buildout.cfg
 * Starting Travis CI and Coveralls.
 
 0.3.2(Dec 31, 2013)

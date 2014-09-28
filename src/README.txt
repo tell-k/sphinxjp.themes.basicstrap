@@ -47,10 +47,10 @@ Requirement
 
 Using
 ===========
-* Twitter Bootstrap 3.1.1 and 2.3.2
+* Twitter Bootstrap 3.2.0 and 2.3.2
 * jQuery 1.8.3
 * Bootswatch
-* Font Awesome 4.3.1
+* Font Awesome 4.2.0
 
 License
 =======
