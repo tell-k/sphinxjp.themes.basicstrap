@@ -41,7 +41,7 @@ html_theme_options = {
     'header_inverse': False,
     'relbar_inverse': False,
 
-    'inner_theme': True,
+    'inner_theme': False,
     'inner_theme_name': 'bootswatch-flatly',
 
     'bootstrap_version': '3',
