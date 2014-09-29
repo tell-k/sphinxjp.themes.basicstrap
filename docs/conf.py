@@ -8,7 +8,7 @@ master_doc = 'index'
 project = u'sphinx theme for basicstrap style'
 copyright = u'2014, tell-k'
 
-version = '0.4.0'
+version = '0.4.1'
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -45,7 +45,7 @@ html_theme_options = {
     'inner_theme_name': 'bootswatch-flatly',
 
     'bootstrap_version': '3',
-    'quick_preview': True,
+    'quick_preview': False,
 
     # 'h1_size': '3.0em',
     # 'h2_size': '2.6em',

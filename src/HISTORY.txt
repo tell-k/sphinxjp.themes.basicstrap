@@ -1,6 +1,11 @@
 History
 =======
 
+0.4.1(Sep 29, 2014)
+---------------------
+
+* Fixed bug `#11 Font Icon does not appear.  <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/11>`_.
+
 0.4.0(Sep 29, 2014)
 ---------------------
 

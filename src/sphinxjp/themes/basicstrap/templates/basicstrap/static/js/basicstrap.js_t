@@ -23,6 +23,7 @@ $(document).ready(function(){
     window.addEventListener("hashchange", shiftWindow);
   }
 
+  {%- if theme_quick_preview|tobool %}
   /*
    * for QuickPreviewModal
    */
@@ -85,5 +86,6 @@ $(document).ready(function(){
       $("#navbar-related").addClass("navbar-" + inverse_type);
       $.cookie('relbar_inverse', inverse_type, {expires: 1, path: '/'});
   });
+  {%- endif %}
 
 });

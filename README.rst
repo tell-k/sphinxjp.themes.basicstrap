@@ -1,5 +1,5 @@
 ====================================================
-sphinxjp.themes.basicstrap 0.4.0
+sphinxjp.themes.basicstrap 0.4.1
 ====================================================
 
 Basicstrap style theme for Sphinx. Using Twitter Bootstrap.
