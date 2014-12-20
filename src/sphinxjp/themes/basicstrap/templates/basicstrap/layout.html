@@ -44,10 +44,10 @@
 {%- macro relbar() %}
 <div id="navbar-related" class=" related navbar {% if (theme_relbar_inverse|tobool) %}navbar-inverse{% else %}navbar-default{% endif %}" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav {% if theme_noresponsiverelbar|tobool %}text-center{% endif %}">
         <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></li>
     </ul>
-    <ul class="nav navbar-nav pull-right hidden-{{ class_device_xs }} hidden-{{ class_device_sm }}">
+<ul class="nav navbar-nav {% if not theme_noresponsiverelbar|tobool %}pull-right hidden-{{ class_device_xs }} hidden-{{ class_device_sm }}{% else %}text-center{% endif %}">
       {% if not (theme_nosidebar|tobool) %}
         {%- for rellink in rellinks|reverse %}
         <li><a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a></li>
@@ -57,6 +57,7 @@
         {%- for parent in parents %}
         <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
         {%- endfor %}
+        <li><a href="#">^top^</a></li>
         {%- block relbaritems %} {% endblock %}
       {% else %}
         {%- if prev %}
@@ -74,7 +75,7 @@
 
 {%- macro sidebar() %}
 {%- if render_sidebar %}
-<div class="{{ bs_span_prefix }}{{ theme_sidebar_span }} hidden-{{ class_device_xs }}">
+<div class="{{ bs_span_prefix }}{{ theme_sidebar_span }} hidden-{{ class_device_xs }}" id="sidebar-wrapper">
   <div class="sidebar hidden-{{ class_device_xs }}" role="navigation" aria-label="main navigation">
     {%- block sidebarlogo %}
     {%- if logo %}
