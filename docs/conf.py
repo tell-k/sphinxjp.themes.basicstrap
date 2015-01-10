@@ -19,10 +19,13 @@ html_theme = 'basicstrap'
 
 html_theme_options = {
     'lang': 'en',
-    'nosidebar': False,
+    'nosidebar': True,
     'rightsidebar': False,
     'sidebar_span': 3,
     'nav_fixed_top': True,
+
+    # works only. nosider=True.
+    'header_searchbox': False,
 
     'nav_fixed': False,
     'nav_width': '900px',
