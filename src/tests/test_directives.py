@@ -7,24 +7,23 @@
     :copyright: tell-k. All Rights Reserved.
 """
 import mock
-import unittest
 
 
-class FonticonRoleTest(unittest.TestCase):
+class TestFonticonRole(object):
 
-    def _getTarget(self):
+    def _get_target(self):
         from sphinxjp.themes.basicstrap.directives import fonticon_role
         return fonticon_role
 
-    def _callFUT(self, *args, **kwargs):
-        return self._getTarget()(*args, **kwargs)
+    def _call_fut(self, *args, **kwargs):
+        return self._get_target()(*args, **kwargs)
 
     def test_it(self):
 
         with mock.patch('sphinxjp.themes.basicstrap.directives.set_classes',
                         return_value=True, autospec=True) as mock_func:
             options = {}
-            nodes, empty = self._callFUT(
+            nodes, empty = self._call_fut(
                 "name",
                 "rawtext",
                 "icon2 icon3",
@@ -33,20 +32,20 @@ class FonticonRoleTest(unittest.TestCase):
                 options=options,
             )
             mock_func.assert_called_with(options)
-            self.assertEqual([], empty)
-            self.assertEqual("icon", nodes[0]["classes"][0])
-            self.assertEqual("icon2", nodes[0]["classes"][1])
-            self.assertEqual("icon3", nodes[0]["classes"][2])
+            assert [] == empty
+            assert "icon" == nodes[0]["classes"][0]
+            assert "icon2" == nodes[0]["classes"][1]
+            assert "icon3" == nodes[0]["classes"][2]
 
 
-class SetupTest(unittest.TestCase):
+class TestSetup(object):
 
-    def _getTarget(self):
+    def _get_target(self):
         from sphinxjp.themes.basicstrap.directives import setup
         return setup
 
-    def _callFUT(self, *args, **kwargs):
-        return self._getTarget()(*args, **kwargs)
+    def _call_fut(self, *args, **kwargs):
+        return self._get_target()(*args, **kwargs)
 
     def test_it(self):
 
@@ -62,8 +61,7 @@ class SetupTest(unittest.TestCase):
         from sphinxjp.themes.basicstrap.directives import fonticon_role
 
         dummy_app = DummyApp()
-        self._callFUT(dummy_app)
-        self.assertEqual('Initializing Basicstrap theme directives',
-                         dummy_app.info)
-        self.assertEqual('fonticon', dummy_app.rolename)
-        self.assertEqual(fonticon_role, dummy_app.rolefunc)
+        self._call_fut(dummy_app)
+        assert 'Initializing Basicstrap theme directives' == dummy_app.info
+        assert 'fonticon' == dummy_app.rolename
+        assert fonticon_role == dummy_app.rolefunc

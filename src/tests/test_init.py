@@ -7,31 +7,30 @@
     :copyright: tell-k. All Rights Reserved.
 """
 import mock
-import unittest
 
 
-class GetPathTest(unittest.TestCase):
+class TestGetPath(object):
 
-    def _getTarget(self):
+    def _get_target(self):
         from sphinxjp.themes.basicstrap import get_path
         return get_path
 
-    def _callFUT(self, *args, **kwargs):
-        return self._getTarget()(*args, **kwargs)
+    def _call_fut(self, *args, **kwargs):
+        return self._get_target()(*args, **kwargs)
 
     def test_it(self):
         from sphinxjp.themes import basicstrap
-        self.assertEqual(basicstrap.template_path, self._callFUT())
+        assert basicstrap.template_path == self._call_fut()
 
 
-class SetupTest(unittest.TestCase):
+class TestSetup(object):
 
-    def _getTarget(self):
+    def _get_target(self):
         from sphinxjp.themes.basicstrap import setup
         return setup
 
-    def _callFUT(self, *args, **kwargs):
-        return self._getTarget()(*args, **kwargs)
+    def _call_fut(self, *args, **kwargs):
+        return self._get_target()(*args, **kwargs)
 
     def test_it(self):
         dummy_app = "dummy_app"
@@ -39,5 +38,5 @@ class SetupTest(unittest.TestCase):
         with mock.patch('sphinxjp.themes.basicstrap.directives.setup',
                         return_value=True, autospec=True) as mock_func:
 
-            self._callFUT(dummy_app)
+            self._call_fut(dummy_app)
             mock_func.assert_called_with(dummy_app)
