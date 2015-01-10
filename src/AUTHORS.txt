@@ -5,7 +5,7 @@ Sphinx template, css, packaging
 -------------------------------
 * tell-k <ffk2005 at gmail.com>
 
-Contributers
+Contributors
 -------------------------------
 
 great thanks.
