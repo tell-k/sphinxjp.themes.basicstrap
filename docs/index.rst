@@ -1,26 +1,20 @@
 =============================================
- Basicstrap style theme sample for Sphinx
+Basicstrap style theme sample for Sphinx
 =============================================
 
 
-Quick preview inner theme
-===========================
+Inner theme preview 
+===================
 
-You can see the theme in real time If you select a theme.
+You can see the inner theme in real time If you select a theme.
 
 .. raw:: html
 
- <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target=".debug-modal">launch quick preview window</a>
+ <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target=".debug-modal">theme prview</a>
 
 
 Quick start
 ===========
-
-install(easy_install):
-
-.. code-block:: bash
-
-    $ easy_install sphinxjp.themes.basicstrap
 
 install(pip):
 
@@ -33,7 +27,7 @@ setup your ``conf.py`` with:
 
 .. code-block:: bash
 
-    extensions = ['sphinxjp.themescore']
+    extensions = ['sphinxjp.themes.basicstrap']
     html_theme = 'basicstrap'
 
 and run:
@@ -43,9 +37,6 @@ and run:
     $ make html
 
 then your will get this page's style HTML output.
-
-In this document "inner_theme_name: bootswatch-flatly" is set. see also :ref:`sample_conf`
-
 
 Links
 =====

@@ -1,6 +1,6 @@
 Basicstrap style theme for Sphinx. Using Twitter Bootstrap.
 
-|travis| |coveralls| |downloads| |version| |license|
+|travis| |coveralls| |downloads| |version| |license| |requires|
 
 Features
 ========
@@ -19,11 +19,6 @@ Make environment with pip::
 
     $ pip install sphinxjp.themes.basicstrap
 
-Make environment with easy_install::
-
-    $ easy_install sphinxjp.themes.basicstrap
-
-
 Convert Usage
 =============
 setup conf.py with::
@@ -37,12 +32,12 @@ and run::
 
 .. caution:: Caution when upgrading from 0.1.1 to 0.2.0
 
- * In version 0.1.1, the header color was black in the default, it has become white in 0.2.0. 
- * If you like the black color header, please set to True the 'header_inverse' option. 
+ * In version 0.1.1, the header color was black in the default, it has become white in 0.2.0.
+ * If you like the black color header, please set to True the 'header_inverse' option.
 
 Requirement
 ===========
-* Python 2.7 or later.
+* Python 2.6, 2.7, 3.3, 3.4 or later.
 * Sphinx 1.2.x or later.
 
 Using
@@ -82,3 +77,7 @@ See the LICENSE file for specific terms.
 .. |license| image:: https://pypip.in/license/sphinxjp.themes.basicstrap/badge.png
     :target: http://pypi.python.org/pypi/sphinxjp.themes.basicstrap/
     :alt: license
+
+.. |requires| image:: https://requires.io/github/tell-k/sphinxjp.themes.basicstrap/requirements.svg?branch=master
+    :target: https://requires.io/github/tell-k/sphinxjp.themes.basicstrap/requirements/?branch=master
+    :alt: requires.io

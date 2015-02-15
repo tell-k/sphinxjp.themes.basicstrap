@@ -7,7 +7,7 @@
 
 
 Admonitions (Docutils origin)
-===============================================================================
+==============================
 
 .. danger::
    This is sample of admonition directive for "Danger".
@@ -77,11 +77,6 @@ The Sphinx Bootstrap Theme uses Bootstrap styling for ``inline code text`` and
     multiline
     code text
 
-Here's an included example with line numbers.
-
-.. literalinclude:: ../../sphinx_bootstrap_theme/__init__.py
-   :linenos:
-
 It also works with existing Sphinx highlighting:
 
 .. code-block:: html
@@ -100,7 +95,7 @@ It also works with existing Sphinx highlighting:
 
     /**
      * Greet.
-     */
+     **/
     function hello(): {
       return "Hello World";
     }
@@ -113,6 +108,25 @@ I have footnoted a first item [#f3]_ and second item [#f4]_.
 .. rubric:: Footnotes
 .. [#f3] My first footnote.
 .. [#f4] My second footnote.
+
+.. [1] A footnote contains body elements, consistently indented by at
+   least 3 spaces.
+
+   This is the footnote's second paragraph.
+
+.. [#label] Footnotes may be numbered, either manually (as in [1]_) or
+   automatically using a "#"-prefixed label.  This footnote has a
+   label so it can be referred to from multiple places, both as a
+   footnote reference ([#label]_).
+
+.. [#] This footnote is numbered automatically and anonymously using a
+   label of "#" only.
+
+.. [*] Footnotes may also use symbols, specified with a "*" label.
+   Here's a reference to the next footnote: [*]_.
+
+.. [*] This footnote shows the next symbol in the sequence.
+
 
 Citation
 ========
@@ -302,7 +316,7 @@ which uses the directive::
     .. cssclass:: table-hover
 
 Mix
-------
+---
 
 .. cssclass:: table-bordered table-striped table-hover
 
@@ -319,3 +333,260 @@ Mix
 which uses the directive::
 
     .. cssclass:: table-bordered table-striped table-hover
+
+
+Structural Elements
+===================
+
+Section Title
+-------------
+
+That's it, the text just above this line.
+
+Transitions
+-----------
+
+Here's a transition:
+
+---------
+
+It divides the section.
+
+Body Elements
+=============
+
+Paragraphs
+----------
+
+A paragraph.
+
+Bullet Lists
+------------
+
+- A bullet list
+
+  + Nested bullet list.
+  + Nested item 2.
+
+- Item 2.
+
+  Paragraph 2 of item 2.
+
+  * Nested bullet list.
+  * Nested item 2.
+
+    - Third level.
+    - Item 2.
+
+  * Nested item 3.
+
+Enumerated Lists
+----------------
+
+1. Arabic numerals.
+
+   a) lower alpha)
+
+      (i) (lower roman)
+
+          A. upper alpha.
+
+             I) upper roman)
+
+2. Lists that don't start at 1:
+
+   3. Three
+
+   4. Four
+
+   C. C
+
+   D. D
+
+   iii. iii
+
+   iv. iv
+
+#. List items may also be auto-enumerated.
+
+Definition Lists
+----------------
+
+Term
+    Definition
+Term : classifier
+    Definition paragraph 1.
+
+    Definition paragraph 2.
+Term
+    Definition
+
+Field Lists
+-----------
+
+:what: Field lists map field names to field bodies, like database
+       records.  They are often part of an extension syntax.  They are
+       an unambiguous variant of RFC 2822 fields.
+
+:how arg1 arg2:
+
+    The field marker is a colon, the field name, and a colon.
+
+    The field body may contain one or more body elements, indented
+    relative to the field marker.
+
+Option Lists
+------------
+
+For listing command-line options:
+
+-a            command-line option "a"
+-b file       options can have arguments
+              and long descriptions
+--long        options can be long also
+--input=file  long options can also have
+              arguments
+
+--very-long-option
+              The description can also start on the next line.
+
+              The description may contain multiple body elements,
+              regardless of where it starts.
+
+-x, -y, -z    Multiple options are an "option group".
+-v, --verbose  Commonly-seen: short & long options.
+-1 file, --one=file, --two file
+              Multiple options with arguments.
+/V            DOS/VMS-style options too
+
+There must be at least two spaces between the option and the
+description.
+
+Literal Blocks
+--------------
+
+Literal blocks are indicated with a double-colon ("::") at the end of
+the preceding paragraph (over there ``-->``).  They can be indented::
+
+    if literal_block:
+        text = 'is left as-is'
+        spaces_and_linebreaks = 'are preserved'
+        markup_processing = None
+
+Or they can be quoted without indentation::
+
+>> Great idea!
+>
+> Why didn't I think of that?
+
+Line Blocks
+-----------
+
+| This is a line block.  It ends with a blank line.
+|     Each new line begins with a vertical bar ("|").
+|     Line breaks and initial indents are preserved.
+| Continuation lines are wrapped portions of long lines;
+  they begin with a space in place of the vertical bar.
+|     The left edge of a continuation line need not be aligned with
+  the left edge of the text above it.
+
+| This is a second line block.
+|
+| Blank lines are permitted internally, but they must begin with a "|".
+
+Take it away, Eric the Orchestra Leader!
+
+    | A one, two, a one two three four
+    |
+    | Half a bee, philosophically,
+    |     must, *ipso facto*, half not be.
+    | But half the bee has got to be,
+    |     *vis a vis* its entity.  D'you see?
+    |
+    | But can a bee be said to be
+    |     or not to be an entire bee,
+    |         when half the bee is not a bee,
+    |             due to some ancient injury?
+    |
+    | Singing...
+
+Block Quotes
+------------
+
+Block quotes consist of indented body elements:
+
+    My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+    as follows and begins now.  All brontosauruses are thin at one
+    end, much much thicker in the middle and then thin again at the
+    far end.  That is my theory, it is mine, and belongs to me and I
+    own it, and what it is too.
+
+    -- Anne Elk (Miss)
+
+Doctest Blocks
+--------------
+
+>>> print 'Python-specific usage examples; begun with ">>>"'
+Python-specific usage examples; begun with ">>>"
+>>> print '(cut and pasted from interactive Python sessions)'
+(cut and pasted from interactive Python sessions)
+
+Directives
+----------
+
+.. contents:: :local:
+
+These are just a sample of the many reStructuredText Directives.  For
+others, please see
+http://docutils.sourceforge.net/docs/ref/rst/directives.html.
+
+Topics, Sidebars, and Rubrics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Sidebar Title
+   :subtitle: Optional Subtitle
+
+   This is a sidebar.  It is for text outside the flow of the main
+   text.  
+
+   .. rubric:: This is a rubric inside a sidebar
+
+   Sidebars often appears beside the main text with a border and
+   background color.
+
+.. topic:: Topic Title
+
+   This is a topic.
+
+.. rubric:: This is a rubric
+
+Compound Paragraph
+~~~~~~~~~~~~~~~~~~
+
+.. compound::
+
+   This paragraph contains a literal block::
+
+       Connecting... OK
+       Transmitting data... OK
+       Disconnecting... OK
+      
+   and thus consists of a simple paragraph, a literal block, and
+   another simple paragraph.  Nonetheless it is semantically *one*
+   paragraph.
+
+This construct is called a *compound paragraph* and can be produced
+with the "compound" directive.
+
+Comments
+--------
+
+Here's one:
+
+.. Comments begin with two dots and a space. Anything may
+   follow, except for the syntax of footnotes, hyperlink
+   targets, directives, or substitution definitions.
+
+   Double-dashes -- "--" -- must be escaped somehow in HTML output.
+
+(View the HTML source to see the comment.)

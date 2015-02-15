@@ -1,6 +1,17 @@
 History
 =======
 
+0.4.2(Feb 16, 2015)
+---------------------
+
+* `#18 Header search box. <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/18>`_
+* `#16 Drop Python-3.2 support. <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/16>`_
+* `#15 UBY: optimize for responsive xs. <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/15>`_ Thanks to westurner.
+* Fixed bug `#17 Switching of the inner theme is too slow. <https://github.com/tell-k/sphinxjp.themes.basicstrap/pull/17>`_
+* Fixed bug `#14 Typo. <https://github.com/tell-k/sphinxjp.themes.basicstrap/pull/14>`_ Thanks to mhor.
+* Fixed bug `#13 Invalid body css. <https://github.com/tell-k/sphinxjp.themes.basicstrap/pull/13>`_ Thanks to 3rdarm.
+* Support wheel format.
+
 0.4.1(Sep 29, 2014)
 ---------------------
 

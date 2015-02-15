@@ -57,7 +57,7 @@
         {%- for parent in parents %}
         <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
         {%- endfor %}
-        <li><a href="#">^top^</a></li>
+        <li><a href="#">top</a></li>
         {%- block relbaritems %} {% endblock %}
       {% else %}
         {%- if prev %}
@@ -67,6 +67,7 @@
         {%- if next %}
         <li><a href="{{ next.link|e }}">{{ next.title }}&nbsp;<i class="icon icon-double-angle-right"></i></a></li>
         {%- endif %}
+        <li><a href="#">top</a></li>
       {%- endif %}
     </ul>
   </div>
@@ -265,8 +266,8 @@
               </li>
             {%- endif %}
 
-            {%- if theme_quick_preview|tobool %}
-            <li><a href="#" data-toggle="modal" data-target=".debug-modal">quick preview</a></li>
+            {%- if theme_theme_preview|tobool %}
+            <li><a href="#" data-toggle="modal" data-target=".debug-modal">theme preview</a></li>
             {%- endif %}
 
             {% if not (theme_nosidebar|tobool) %}
@@ -303,20 +304,19 @@
                   <input type="hidden" name="area" value="default" />
                 </form>
             </li>
-
             {%- endif %}
 
-          {% if (theme_nosidebar|tobool) and (theme_header_searchbox|tobool) %}
-          <li>
-            <form class="navbar-form navbar-right" action="{{ pathto('search') }}" method="get">
-             <div class="form-group" style="padding-right:10px;">
-              <input type="text" name="q" class="form-control" placeholder="Search" />
-              <input type="hidden" name="check_keywords" value="yes" />
-              <input type="hidden" name="area" value="navbar" />
-             </div>
-            </form>
-          </li>
-          {% endif %}
+            {% if (theme_nosidebar|tobool) and (theme_header_searchbox|tobool) %}
+            <li>
+              <form class="navbar-form navbar-right" action="{{ pathto('search') }}" method="get">
+               <div class="form-group" style="padding-right:20px;">
+                <input type="text" name="q" class="form-control" placeholder="Search" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="navbar" />
+               </div>
+              </form>
+            </li>
+            {% endif %}
 
           </ul>
 
@@ -349,7 +349,7 @@
                 </li>
               {%- endif %}
 
-              {%- if theme_quick_preview|tobool %}
+              {%- if theme_theme_preview|tobool %}
               <li><a href="#" data-toggle="modal" data-target=".debug-modal">quick preview</a></li>
               {%- endif %}
 
@@ -459,8 +459,8 @@
     </div>
     <!-- /container -->
 
-    {%- if theme_quick_preview|tobool %}
-    {%- include "_quick_preview.html" %}
+    {%- if theme_theme_preview|tobool %}
+    {%- include "_theme_preview.html" %}
     {%- endif %}
 
   </body>

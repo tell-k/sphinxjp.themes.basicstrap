@@ -11,3 +11,4 @@ parts
 *.*~
 .tox
 .coverage
+.eggs

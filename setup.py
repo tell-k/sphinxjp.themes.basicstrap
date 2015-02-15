@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+import re
 import os
 import sys
+
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
@@ -23,9 +25,14 @@ class PyTest(TestCommand):
         errno = pytest.main(self.pytest_args)
         sys.exit(errno)
 
-version = '0.4.2'
+here = os.path.dirname(__file__)
 
-requires = [
+version_regex = re.compile(r".*__version__ = '(.*?)'", re.S)
+version_script = os.path.join(here, 'src', 'sphinxjp',
+                              'themes', 'basicstrap', '__init__.py')
+version = version_regex.match(open(version_script, 'r').read()).group(1)
+
+install_requires = [
     "setuptools",
     "Sphinx",
 ]
@@ -37,9 +44,9 @@ tests_require = [
 ]
 
 long_description = '\n'.join([
-    open(os.path.join("src", "README.txt")).read(),
-    open(os.path.join("src", "AUTHORS.txt")).read(),
-    open(os.path.join("src", "HISTORY.txt")).read(),
+    open(os.path.join(here, "src", "README.txt")).read(),
+    open(os.path.join(here, "src", "AUTHORS.txt")).read(),
+    open(os.path.join(here, "src", "HISTORY.txt")).read(),
 ])
 
 classifiers = [
@@ -60,7 +67,7 @@ classifiers = [
 setup(
     name='sphinxjp.themes.basicstrap',
     version=version,
-    description='A sphinx theme for Basicstrap style. Using Twitter Bootstrap. #sphinxjp',
+    description='A sphinx theme for Basicstrap style. Using Twitter Bootstrap. #sphinxjp',  # NOQA
     long_description=long_description,
     classifiers=classifiers,
     keywords=['sphinx', 'reStructuredText', 'theme'],
@@ -72,7 +79,7 @@ setup(
     packages=find_packages('src', exclude=["tests"]),
     package_dir={'': 'src'},
     cmdclass={'test': PyTest},
-    install_requires=requires,
+    install_requires=install_requires,
     tests_require=tests_require,
     include_package_data=True,
     entry_points="""
