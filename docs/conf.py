@@ -24,7 +24,7 @@ html_theme_options = {
     # Disable showing the sidebar. Defaults to 'false'
     'nosidebar': False,
     # Show header searchbox. Defaults to false. works only "nosidber=True", 
-    'header_searchbox': True,
+    'header_searchbox': False,
 
     # Put the sidebar on the right side. Defaults to false.
     'rightsidebar': False,
@@ -65,7 +65,7 @@ html_theme_options = {
     'relbar_inverse': False,
 
     # Enable inner theme by Bootswatch. Defaults to false
-    'inner_theme': True,
+    'inner_theme': False,
     # Set the name of innner theme. Defaults to 'bootswatch-simplex'
     'inner_theme_name': 'bootswatch-simplex',
 
