@@ -406,7 +406,7 @@
         {% if (not theme_rightsidebar|tobool) %} {{ sidebar() }} {% endif %}
         {% endblock %}
 
-        <div class="{% if (not theme_nosidebar|tobool) %}{{ bs_span_prefix }}{{ 12 - theme_sidebar_span|int }}{% else %}{{ bs_span_prefix }}12{% endif %}">
+        <div class="{% if (not theme_nosidebar|tobool) %}{{ bs_span_prefix }}{{ 12 - theme_sidebar_span|int }}{% else %}{{ bs_span_prefix }}12{% endif %}" id="content-wrapper">
           <div class="document" role="main">
             {%- block document %}
             <div class="documentwrapper">
