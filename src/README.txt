@@ -30,11 +30,6 @@ and run::
 
     $ make html
 
-.. caution:: Caution when upgrading from 0.1.1 to 0.2.0
-
- * In version 0.1.1, the header color was black in the default, it has become white in 0.2.0.
- * If you like the black color header, please set to True the 'header_inverse' option.
-
 Requirement
 ===========
 * Python 2.6, 2.7, 3.3, 3.4 or later.
@@ -42,10 +37,10 @@ Requirement
 
 Using
 ===========
-* Twitter Bootstrap 3.2.0 and 2.3.2
-* jQuery 1.8.3
+* Twitter Bootstrap 3.3.4 and 2.3.2
+* jQuery 1.11.1
 * Bootswatch
-* Font Awesome 4.2.0
+* Font Awesome 4.3.0
 
 License
 =======

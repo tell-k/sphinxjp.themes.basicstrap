@@ -6,9 +6,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 project = u'sphinx theme for basicstrap style'
-copyright = u'2014, tell-k'
+copyright = u'2015, tell-k'
 
-version = '0.4.2'
+version = '0.4.3'
 
 # -- Options for HTML output --------------------------
 
@@ -23,7 +23,7 @@ html_theme_options = {
     'lang': 'en',
     # Disable showing the sidebar. Defaults to 'false'
     'nosidebar': False,
-    # Show header searchbox. Defaults to false. works only "nosidber=True", 
+    # Show header searchbox. Defaults to false. works only "nosidber=True",
     'header_searchbox': False,
 
     # Put the sidebar on the right side. Defaults to false.
@@ -49,14 +49,17 @@ html_theme_options = {
     'noresponsive': False,
     # Disable the responsive footer relbar. Defaults to false
     'noresponsiverelbar': False,
-    # Disable flat design. Defaults to false. Works only "bootstrap_version = 3"
+    # Disable flat design. Defaults to false.
+    # Works only "bootstrap_version = 3"
     'noflatdesign': False,
 
     # Enable Google Web Font. Defaults to false
     'googlewebfont': False,
-    # Set the URL of Google Web Font's CSS. Defaults to 'http://fonts.googleapis.com/css?family=Text+Me+One'
+    # Set the URL of Google Web Font's CSS.
+    # Defaults to 'http://fonts.googleapis.com/css?family=Text+Me+One'
     'googlewebfont_url': 'http://fonts.googleapis.com/css?family=Lily+Script+One',  # NOQA
-    # Set the Style of Google Web Font's CSS. Defaults to "font-family: 'Text Me One', sans-serif;"
+    # Set the Style of Google Web Font's CSS.
+    # Defaults to "font-family: 'Text Me One', sans-serif;"
     'googlewebfont_style': u"font-family: 'Lily Script One' cursive;",
 
     # Set 'navbar-inverse' attribute to header navbar. Defaults to false.
@@ -72,7 +75,7 @@ html_theme_options = {
     # Select Twitter bootstrap version 2 or 3. Defaults to '3'
     'bootstrap_version': '3',
 
-    # Show "theme preview" button in header navbar. Defaults to false. 
+    # Show "theme preview" button in header navbar. Defaults to false.
     'theme_preview': True,
 
     # Set the Size of Heading text. Defaults to None

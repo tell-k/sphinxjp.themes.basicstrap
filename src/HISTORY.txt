@@ -1,6 +1,13 @@
 History
 =======
 
+0.4.3(May 7, 2015)
+---------------------
+* `#19 ENH: Add id=content-wrapper to content column div for CSS. <https://github.com/tell-k/sphinxjp.themes.basicstrap/issues/19>`_
+* Update Bootstrap ver3.3.4
+* Update Font Awesome ver4.3.0
+* Update jQuery ver1.11.1
+
 0.4.2(Feb 16, 2015)
 ---------------------
 

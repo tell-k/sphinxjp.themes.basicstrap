@@ -124,11 +124,6 @@ Inverse color
 
    Figure6: inverse color
 
-.. caution:: Caution when upgrading from 0.1.1 to 0.2.0
-
-   * In version 0.1.1, the header color was black in the default, it has become white in 0.2.0.
-   * If you like the black color header, please set to True the 'header_inverse' option.
-
 
 Responsive design
 ========================
