@@ -60,23 +60,22 @@ See the LICENSE file for specific terms.
 .. |travis| image:: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap.svg?branch=master
     :target: https://travis-ci.org/tell-k/sphinxjp.themes.basicstrap
 
-
 .. |coveralls| image:: https://coveralls.io/repos/tell-k/sphinxjp.themes.basicstrap/badge.png
     :target: https://coveralls.io/r/tell-k/sphinxjp.themes.basicstrap
     :alt: coveralls.io
 
-.. |downloads| image:: https://pypip.in/d/sphinxjp.themes.basicstrap/badge.png
+.. |requires| image:: https://requires.io/github/tell-k/sphinxjp.themes.basicstrap/requirements.svg?tag=v0.1.1
+     :target: https://requires.io/github/tell-k/sphinxjp.themes.basicstrap/requirements/?tag=v0.1.1
+     :alt: requires.io
+
+.. |downloads| image:: https://img.shields.io/pypi/dm/sphinxjp.themes.basicstrap.svg
     :target: http://pypi.python.org/pypi/sphinxjp.themes.basicstrap/
     :alt: downloads
 
-.. |version| image:: https://pypip.in/v/sphinxjp.themes.basicstrap/badge.png
+.. |version| image:: https://img.shields.io/pypi/v/sphinxjp.themes.basicstrap.svg
     :target: http://pypi.python.org/pypi/sphinxjp.themes.basicstrap/
     :alt: latest version
 
-.. |license| image:: https://pypip.in/license/sphinxjp.themes.basicstrap/badge.png
+.. |license| image:: https://img.shields.io/pypi/l/sphinxjp.themes.basicstrap.svg
     :target: http://pypi.python.org/pypi/sphinxjp.themes.basicstrap/
     :alt: license
-
-.. |requires| image:: https://requires.io/github/tell-k/sphinxjp.themes.basicstrap/requirements.svg?branch=master
-    :target: https://requires.io/github/tell-k/sphinxjp.themes.basicstrap/requirements/?branch=master
-    :alt: requires.io
