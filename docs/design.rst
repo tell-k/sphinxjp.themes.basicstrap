@@ -175,6 +175,7 @@ Inner design theme
   * bootswatch-readable
   * bootswatch-simplex
   * bootswatch-slate
+  * bootswatch-solar (bootstrap_version 3 only)
   * bootswatch-spacelab
   * bootswatch-paper (bootstrap_version 3 only)
   * bootswatch-sandstone (bootstrap_version 3 only)

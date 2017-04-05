@@ -1,4 +1,6 @@
 {% set table_border_color = "#4d5d6d" %}
+{% set table_color = "#ebebeb" %}
+{% set table_background_color = "#2b3e50" %}
 
 {% set danger_color = "#ffffff" %}
 {% set danger_background_color = "#db524b" %}

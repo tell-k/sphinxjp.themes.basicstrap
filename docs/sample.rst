@@ -12,6 +12,40 @@ Admonitions (Docutils origin)
 .. danger::
    This is sample of admonition directive for "Danger".
 
+   .. cssclass:: table-bordered table-striped table-hover
+
+   +------------------------+------------+----------+----------+
+   | Header1                | Header2    | Header3  | Header4  |
+   +========================+============+==========+==========+
+   | row1, cell1            | cell2      | cell3    | cell4    |
+   +------------------------+------------+----------+----------+
+   | row2 ...               | ...        | ...      |          |
+   +------------------------+------------+----------+----------+
+   | ...                    | ...        | ...      |          |
+   +------------------------+------------+----------+----------+
+
+   .. seealso::
+      This is sample of admonition directive for "SeeAlso".
+
+   .. versionadded:: 0.3.1
+      Here is description of specification which added on that version.
+
+   .. versionchanged:: 0.8
+      Here is description of specification which changed on that version.
+
+   .. code-block:: python
+
+      >>> from fibo import fib, fib2
+      >>> fib(500)
+      1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+   .. code-block:: python
+      :linenos:
+
+      >>> from fibo import fib, fib2
+      >>> fib(500)
+      1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
 .. error::
    This is sample of admonition directive for "Error".
 
@@ -55,6 +89,12 @@ Admonitions (Sphinx Additional)
    >>> fib(500)
    1 1 2 3 5 8 13 21 34 55 89 144 233 377
 
+.. code-block:: python
+   :linenos:
+
+   >>> from fibo import fib, fib2
+   >>> fib(500)
+   1 1 2 3 5 8 13 21 34 55 89 144 233 377
 
 Headings
 ========
@@ -547,7 +587,7 @@ Topics, Sidebars, and Rubrics
    :subtitle: Optional Subtitle
 
    This is a sidebar.  It is for text outside the flow of the main
-   text.  
+   text.
 
    .. rubric:: This is a rubric inside a sidebar
 
@@ -570,7 +610,7 @@ Compound Paragraph
        Connecting... OK
        Transmitting data... OK
        Disconnecting... OK
-      
+
    and thus consists of a simple paragraph, a literal block, and
    another simple paragraph.  Nonetheless it is semantically *one*
    paragraph.
@@ -590,3 +630,202 @@ Here's one:
    Double-dashes -- "--" -- must be escaped somehow in HTML output.
 
 (View the HTML source to see the comment.)
+
+Admonitions with inner blocks
+=============================
+
+.. tip::
+   This is sample of admonition directive for "Tip" with a bullet list
+
+   * list item A
+   * list item B
+   * list item C
+
+.. tip::
+   This is sample of admonition directive for "Tip" with a numbered list
+
+   1) list item 1
+   2) list item 2
+   3) list item 3
+
+.. tip::
+   This is sample of admonition directive for "Tip" with a definition list
+
+   Term
+       Definition
+   Term : classifier
+       Definition paragraph 1.
+
+       Definition paragraph 2.
+   Term
+       Definition
+
+
+.. tip::
+   This is sample of admonition directive for "Tip" with a code
+
+   .. code-block:: none
+
+      single line of code without line numbers
+
+.. tip::
+   This is sample of admonition directive for "Tip" with a code with line numbers
+.. code-block:: none
+      :linenos:
+
+      line 1
+      line 2
+
+.. tip::
+   This is sample of admonition directive for "Tip" with a table
+
+   =====  =====  =======
+   A      B      A and B
+   =====  =====  =======
+   False  False  False
+   True   False  False
+   False  True   False
+   True   True   True
+   =====  =====  =======
+
+.. tip::
+   This is sample of admonition directive for "Tip" with a block quote
+
+       My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+       as follows and begins now.  All brontosauruses are thin at one
+       end, much much thicker in the middle and then thin again at the
+       far end.  That is my theory, it is mine, and belongs to me and I
+       own it, and what it is too.
+
+       -- Anne Elk (Miss)
+
+.. note::
+   This is sample of admonition directive for "Note" with a table
+
+   =====  =====  =======
+   A      B      A and B
+   =====  =====  =======
+   False  False  False
+   True   False  False
+   False  True   False
+   True   True   True
+   =====  =====  =======
+
+.. note::
+   This is sample of admonition directive for "Note" with a block quote
+
+       My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+       as follows and begins now.  All brontosauruses are thin at one
+       end, much much thicker in the middle and then thin again at the
+       far end.  That is my theory, it is mine, and belongs to me and I
+       own it, and what it is too.
+
+       -- Anne Elk (Miss)
+
+.. warning::
+   This is sample of admonition directive for "Warning" with a table
+
+   =====  =====  =======
+   A      B      A and B
+   =====  =====  =======
+   False  False  False
+   True   False  False
+   False  True   False
+   True   True   True
+   =====  =====  =======
+
+.. warning::
+   This is sample of admonition directive for "Warning" with a block quote
+
+       My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+       as follows and begins now.  All brontosauruses are thin at one
+       end, much much thicker in the middle and then thin again at the
+       far end.  That is my theory, it is mine, and belongs to me and I
+       own it, and what it is too.
+
+       -- Anne Elk (Miss)
+
+.. error::
+   This is sample of admonition directive for "Error" with a table
+
+   =====  =====  =======
+   A      B      A and B
+   =====  =====  =======
+   False  False  False
+   True   False  False
+   False  True   False
+   True   True   True
+   =====  =====  =======
+
+.. error::
+   This is sample of admonition directive for "Error" with a block quote
+
+       My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+       as follows and begins now.  All brontosauruses are thin at one
+       end, much much thicker in the middle and then thin again at the
+       far end.  That is my theory, it is mine, and belongs to me and I
+       own it, and what it is too.
+
+       -- Anne Elk (Miss)
+
+.. admonition::
+   This is sample of admonition directive for "Admonition" with a table
+
+   =====  =====  =======
+   A      B      A and B
+   =====  =====  =======
+   False  False  False
+   True   False  False
+   False  True   False
+   True   True   True
+   =====  =====  =======
+
+.. admonition::
+   This is sample of admonition directive for "Admonition" with a block quote
+
+       My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
+       as follows and begins now.  All brontosauruses are thin at one
+       end, much much thicker in the middle and then thin again at the
+       far end.  That is my theory, it is mine, and belongs to me and I
+       own it, and what it is too.
+
+       -- Anne Elk (Miss)
+
+
+
+Headings
+========
+
+Display line numbers:
+
+.. code-block:: html
+   :linenos:
+
+    <html>
+      <body>Hello World</body>
+    </html>
+
+Long lines
+----------
+
+Here are very long lines with
+
+.. code-block:: none
+
+   A very very very, really very very lery, really really very, super mega giga long long very long absurd long line of text with even more text comming after this full-stop . Told ya! More and more and more.
+
+with line numbers
+
+.. code-block:: none
+   :linenos:
+
+   A very very very, really very very lery, really really very, super mega giga long long very long absurd long line of text with even more text comming after this full-stop . Told ya! More and more and more.
+
+with line numbers and caption
+
+.. code-block:: none
+   :caption: A caption
+   :linenos:
+
+   A very very very, really very very lery, really really very, super mega giga long long very long absurd long line of text with even more text comming after this full-stop . Told ya! More and more and more.
+

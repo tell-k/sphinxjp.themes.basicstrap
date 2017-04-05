@@ -1,6 +1,8 @@
 {% set table_border_color = "#999999" %}
 {% set table_oddrow_color = "#eaeaea;" %}
 {% set table_hover_color  = "#dddddd" %}
+{% set table_color = "#555" %}
+{% set table_background_color = "#fff" %}
 
 {% set danger_color = "#ffffff" %}
 {% set danger_background_color = "#d14432" %}
