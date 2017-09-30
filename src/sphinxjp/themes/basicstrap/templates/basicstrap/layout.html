@@ -23,23 +23,11 @@
 {%- set titlesuffix = "" %}
 {%- endif %}
 
-{%- if theme_bootstrap_version == "3" %}
-  {%- set bs_span_prefix = "col-md-" %}
-  {%- set class_device_xs= "xs" %}
-  {%- set class_device_sm= "sm" %}
-  {%- set class_device_md= "md" %}
-  {%- set class_row = "row" %}
-{%- else %}
-  {%- set bs_span_prefix = "span" %}
-  {%- set class_device_xs= "phone" %}
-  {%- set class_device_sm= "tablet" %}
-  {%- set class_device_md= "desktop" %}
-  {%- if (not theme_row_fixed|tobool) %}
-    {%- set class_row = "row-fluid" %}
-  {%- else %}
-    {%- set class_row = "row" %}
-  {%- endif %}
-{%- endif %}
+{%- set bs_span_prefix = "col-md-" %}
+{%- set class_device_xs= "xs" %}
+{%- set class_device_sm= "sm" %}
+{%- set class_device_md= "md" %}
+{%- set class_row = "row" %}
 
 {%- macro relbar() %}
 <div id="navbar-related" class=" related navbar {% if (theme_relbar_inverse|tobool) %}navbar-inverse{% else %}navbar-default{% endif %}" role="navigation" aria-label="related navigation">
@@ -114,7 +102,7 @@
 {%- endif %}
 {%- endmacro %}
 
-{% set script_files = script_files + ['_static/js/bootstrap' + theme_bootstrap_version + '.min.js'] %}
+{% set script_files = script_files + ['_static/js/bootstrap3.min.js'] %}
 {%- macro script() %}
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
@@ -146,28 +134,23 @@
 <link rel="stylesheet" href="{{ pathto('_static/css/basicstrap-base.css', 1) }}" type="text/css" />
 
 {%- if (theme_inner_theme|tobool) %}
-<link rel="stylesheet" id="current-theme" href="{{ pathto('_static/css/bootstrap' + theme_bootstrap_version + '/' + theme_inner_theme_name + '.css', 1) }}" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="{{ pathto('_static/css/bootstrap3/' + theme_inner_theme_name + '.css', 1) }}" type="text/css" />
 <link rel="stylesheet" id="current-adjust-theme" href="{{ pathto('_static/css/adjust_theme/' + theme_inner_theme_name + '.css', 1) }}" type="text/css" />
 {%- else %}
-<link rel="stylesheet" id="current-theme" href="{{ pathto('_static/css/bootstrap' + theme_bootstrap_version + '/bootstrap.min.css', 1) }}" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="{{ pathto('_static/css/bootstrap3/bootstrap.min.css', 1) }}" type="text/css" />
 <link rel="stylesheet" id="current-adjust-theme" type="text/css" />
 {%- endif %}
 
-{%- if theme_bootstrap_version == "3" and theme_noflatdesign|tobool %}
-<link rel="stylesheet" href="{{ pathto('_static/css/bootstrap' + theme_bootstrap_version + '/bootstrap-theme.min.css', 1) }}" type="text/css" />
+{%- if theme_noflatdesign|tobool %}
+<link rel="stylesheet" href="{{ pathto('_static/css/bootstrap3/bootstrap-theme.min.css', 1) }}" type="text/css" />
 {%- endif %}
 
 <link rel="stylesheet" href="{{ pathto('_static/css/font-awesome.min.css', 1) }}">
 {% if (theme_nav_fixed_top|tobool) %}
 <style type="text/css">
   body {
-    {%- if theme_bootstrap_version == "3" %}
     padding-top: 60px;
     padding-bottom: 40px;
-    {%- else %}
-    padding-top: 60px;
-    padding-bottom: 40px;
-    {%- endif %}
   }
 </style>
 {% endif %}
@@ -176,11 +159,7 @@
 {%- for cssfile in css_files %}
 <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
 {%- endfor %}
-{%- if (not theme_noresponsive|tobool) and theme_bootstrap_version == "2" %}
-<link rel="stylesheet" href="{{ pathto('_static/css/bootstrap2/bootstrap-responsive.min.css', 1) }}" type="text/css" />
-{%- endif %}
-
-{%- if theme_noresponsive|tobool and theme_bootstrap_version == "3" %}
+{%- if theme_noresponsive|tobool %}
 <link rel="stylesheet" href="{{ pathto('_static/css/bootstrap3/bootstrap-non-responsive.css', 1) }}" type="text/css" />
 {%- endif %}
 
@@ -194,9 +173,7 @@
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
     {%- endblock %}
 
-    {%- if theme_noresponsive|tobool and theme_bootstrap_version == "3" %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {%- endif %}
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -241,8 +218,6 @@
   <body role="document">
 
     {%- block header %}
-
-    {%- if theme_bootstrap_version == "3" %}
     <div id="navbar-top" class="navbar {% if (theme_nav_fixed_top|tobool) %}navbar-fixed-top {% endif %}{% if (theme_header_inverse|tobool) %}navbar-inverse{% else %}navbar-default{% endif %}" role="navigation" aria-label="top navigation">
       <div class="{% if (not theme_nav_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
         <div class="navbar-header">
@@ -323,76 +298,6 @@
         </div>
       </div>
     </div>
-
-    {%- else %}
-
-    <div id="navbar-top" class="navbar {% if (theme_nav_fixed_top|tobool) %}navbar-fixed-top {% endif %}{% if (theme_header_inverse|tobool) %}navbar-inverse{% else %}navbar-default{% endif %}" role="navigation" aria-label="top navigation">
-      <div class="navbar-inner">
-        <div class="{% if (not theme_nav_fixed|tobool) %}container-fluid{% else %}container{% endif %}">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <div role="banner">
-            <a class="brand" href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>
-          </div>
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-
-              {%- if (not theme_noresponsive|tobool) and display_toc %}
-                <li class="dropdown hidden-lg hidden-{{ class_device_md }}">
-                  <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">{{ _('Table Of Contents') }} <b class="caret"></b></a>
-                  <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
-                  {{ toc }}
-                  </ul>
-                </li>
-              {%- endif %}
-
-              {%- if theme_theme_preview|tobool %}
-              <li><a href="#" data-toggle="modal" data-target=".debug-modal">theme preview</a></li>
-              {%- endif %}
-
-              {% if not (theme_nosidebar|tobool) %}
-                {%- for rellink in rellinks|reverse %}
-                <li><a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a></li>
-                {%- endfor %}
-                {%- for parent in parents %}
-                <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
-                {%- endfor %}
-              {% else %}
-                <li><a class="uplink" href="{{ pathto(master_doc) }}">{{ _('Contents') }}</a></li>
-                {%- if prev %}
-                <li><a href="{{ prev.link|e }}"><i class="icon icon-double-angle-left"></i>&nbsp;{{ prev.title }}</a></li>
-                {%- endif %}
-                {%- if next %}
-                <li><a href="{{ next.link|e }}">{{ next.title }}&nbsp;<i class="icon icon-double-angle-right"></i></a></li>
-                {%- endif %}
-              {%- endif %}
-
-              {%- if not theme_noresponsive|tobool %}
-              {%- if show_source and has_source and sourcename %}
-              <li class="hidden-lg hidden-{{ class_device_md }}"><a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a></li>
-              {%- endif %}
-
-              <li class="hidden-lg hidden-{{ class_device_md }}">
-                  <form class="search form-search form-inline sp-searchbox" action="{{ pathto('search') }}" method="get">
-                    <div class="input-append">
-                      <input type="text" class="search-query form-control" name="q" placeholder="Search...">
-                      <input type="submit" class="btn" value="{{ _('Go') }}" />
-                    </div>
-                    <input type="hidden" name="check_keywords" value="yes" />
-                    <input type="hidden" name="area" value="default" />
-                  </form>
-              </li>
-              {%- endif %}
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    {%- endif %}
     {% endblock %}
 
     <!-- container -->

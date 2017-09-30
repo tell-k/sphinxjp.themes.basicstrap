@@ -62,12 +62,3 @@ div.navbar-inverse ul.sp-localtoc ul a:hover{
    background-color: #0066cc;
    color: #ffffff;
 }
-
-{% if theme_bootstrap_version == "2" %}
-/* Docutils
-   ---------------------------------------------------------*/
-
-table.docutils td.label {
-  min-height: 0px;
-}
-{% endif %}

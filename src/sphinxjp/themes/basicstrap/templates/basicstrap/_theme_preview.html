@@ -8,21 +8,6 @@ Theme preview window
 :license: MIT Licence, see LICENSE for details.
 #}
 
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-amelia.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-cerulean.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-cosmo.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-cyborg.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-flatly.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-journal.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-readable.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-simplex.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-slate.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-spacelab.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-spruce.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-superhero.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/bootswatch-united.css', 1) }}" style="display:none;" />
-<img src="{{ pathto('_static/css/bootstrap2/geo-bootstrap.css', 1) }}" style="display:none;" />
-
 <img src="{{ pathto('_static/css/bootstrap3/bootswatch-amelia.css', 1) }}" style="display:none;" />
 <img src="{{ pathto('_static/css/bootstrap3/bootswatch-cerulean.css', 1) }}" style="display:none;" />
 <img src="{{ pathto('_static/css/bootstrap3/bootswatch-cosmo.css', 1) }}" style="display:none;" />
@@ -89,17 +74,12 @@ Theme preview window
               <option value="bootswatch-spacelab">bootswatch-spacelab</option>
               <option value="bootswatch-superhero">bootswatch-superhero</option>
               <option value="bootswatch-united">bootswatch-united</option>
-              {%- if theme_bootstrap_version == "3" %}
               <option value="bootswatch-solar">bootswatch-solar</option>
               <option value="bootswatch-paper">bootswatch-paper</option>
               <option value="bootswatch-sandstone">bootswatch-sandstone</option>
               <option value="bootswatch-darkly">bootswatch-darkly</option>
               <option value="bootswatch-lumen">bootswatch-lumen</option>
               <option value="bootswatch-yeti">bootswatch-yeti</option>
-              {%- else %}
-              <option value="bootswatch-spruce">bootswatch-spruce</option>
-              <option value="geo-bootstrap">geo-bootstrap</option>
-              {%- endif %}
             </select><br />
           </div>
           <div class="checkbox">
@@ -115,7 +95,6 @@ Theme preview window
             </label>
           </div>
         </form>
-        <span id="bootstrap-version" style="display:none">{{ theme_bootstrap_version }}</span>
         <p style="padding-top:10px">
         If you add the following options in conf.py, you can apply the design.
         </p>

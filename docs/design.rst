@@ -175,18 +175,16 @@ Inner design theme
   * bootswatch-readable
   * bootswatch-simplex
   * bootswatch-slate
-  * bootswatch-solar (bootstrap_version 3 only)
+  * bootswatch-solar
   * bootswatch-spacelab
-  * bootswatch-paper (bootstrap_version 3 only)
-  * bootswatch-sandstone (bootstrap_version 3 only)
-  * bootswatch-spruce (bootstrap_version 2 only)
+  * bootswatch-paper
+  * bootswatch-sandstone
   * bootswatch-superhero
   * bootswatch-united
-  * bootswatch-darkly(bootstrap_version 3 only)
+  * bootswatch-darkly
   * bootswatch-flatly
-  * bootswatch-lumen (bootstrap_version 3 only)
-  * bootswatch-yeti(bootstrap_version 3 only)
-  * geo-bootstrap (bootstrap_version 2 only)
+  * bootswatch-lumen
+  * bootswatch-yeti
 
 
 Web Font

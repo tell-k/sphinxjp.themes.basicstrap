@@ -45,8 +45,7 @@ $(document).ready(function(){
    * for QuickPreviewModal
    */
   if($.cookie('inner_theme')) {
-      var bootstrap_version = $("#bootstrap-version").html();
-      $("#current-theme").attr({href: "_static/css/bootstrap" + bootstrap_version + "/" +$.cookie('inner_theme') + ".css"})
+      $("#current-theme").attr({href: "_static/css/bootstrap3/" +$.cookie('inner_theme') + ".css"})
       $("#current-adjust-theme").attr({href: "_static/css/adjust_theme/" + $.cookie('inner_theme') + ".css"})
       $('#select-theme').val($.cookie('inner_theme'));
   }
@@ -72,19 +71,18 @@ $(document).ready(function(){
 
   $("#select-theme").change(function(e){
       e.preventDefault();
-      var bootstrap_version = $("#bootstrap-version").html();
       var theme;
       $("#select-theme option:selected").each(function () {
           theme = $(this).val();
       });
       if (theme == '') {
-          $("#current-theme").attr({href: "_static/css/bootstrap" + bootstrap_version + "/bootstrap.min.css"})
+          $("#current-theme").attr({href: "_static/css/bootstrap3/bootstrap.min.css"})
           $("#current-adjust-theme").attr({href: ""})
           $.cookie('inner_theme', theme, {expires: 1, path: '/'});
           makeHtmlOptions();
           return
       }
-      $("#current-theme").attr({href: "_static/css/bootstrap" + bootstrap_version + "/" + theme + ".css"})
+      $("#current-theme").attr({href: "_static/css/bootstrap3/" + theme + ".css"})
       $("#current-adjust-theme").attr({href: "_static/css/adjust_theme/" + theme + ".css"})
       $.cookie('inner_theme', theme, {expires: 1, path: '/'});
       makeHtmlOptions();

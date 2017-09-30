@@ -107,37 +107,6 @@ h2, h3, h4, h5, h6 {
  border-bottom: 1px solid #d0d0d0;
 }
 
-{%- if theme_bootstrap_version == '2' %}
-div.sidebar ul {
- margin-left: 0;
-}
-ul.sp-localtoc{
-   margin-left: 0 !important;
-}
-ul.sp-localtoc ul{
-   margin-left: 0 !important;
-}
-ul.sp-localtoc ul ul{
-   margin-left: 0 !important;
-}
-ul.sp-localtoc ul ul a{
-   margin-left: 25px;
-}
-ul.sp-localtoc ul ul ul a{
-   margin-left: 35px;
-}
-ul.sp-localtoc ul ul ul ul a{
-   margin-left: 45px;
-}
-ul.sp-localtoc ul ul ul ul ul a{
-   margin-left: 55px;
-}
-ul.sp-localtoc ul ul ul ul ul a{
-   margin-left: 65px;
-}
-{% endif %}
-
-
 /* for tablet */
 @media (max-width: 767px) {
   form.sp-searchbox div.input-append {
@@ -145,11 +114,7 @@ ul.sp-localtoc ul ul ul ul ul a{
     margin-left: 12px;
   }
   form.sp-searchbox div.input-append {
-    {%- if theme_bootstrap_version == '2' %}
-    width: 70%;
-    {% else %}
     width: 90%;
-    {% endif %}
   }
   form.sp-searchbox input.search-query {
     width: 100%;
@@ -183,4 +148,3 @@ ul.sp-localtoc ul ul ul ul ul a{
   }
   {% endif %}
 }
-

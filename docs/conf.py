@@ -50,7 +50,6 @@ html_theme_options = {
     # Disable the responsive footer relbar. Defaults to false
     'noresponsiverelbar': False,
     # Disable flat design. Defaults to false.
-    # Works only "bootstrap_version = 3"
     'noflatdesign': False,
 
     # Enable Google Web Font. Defaults to false
@@ -71,9 +70,6 @@ html_theme_options = {
     'inner_theme': False,
     # Set the name of innner theme. Defaults to 'bootswatch-simplex'
     'inner_theme_name': 'bootswatch-simplex',
-
-    # Select Twitter bootstrap version 2 or 3. Defaults to '3'
-    'bootstrap_version': '3',
 
     # Show "theme preview" button in header navbar. Defaults to false.
     'theme_preview': True,
