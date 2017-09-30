@@ -41,9 +41,9 @@ Requirement
 
 Using
 ===========
-* Twitter Bootstrap 3.3.4 and 2.3.2
+* Twitter Bootstrap 3.3.7
 * jQuery 1.11.1
-* Bootswatch
+* Bootswatch 3.3.7
 * Font Awesome 4.3.0
 
 License

@@ -1,47 +1,26 @@
-/* Template-specific stuff
+/* Non-responsive overrides for Bootstrap 3
  *
- * Customizations just for the template; these are not necessary for anything
- * with disabling the responsiveness.
- */
-
-/* Account for fixed navbar */
-body {
-  min-width: 970px;
-}
-
-/* Finesse the page header spacing */
-.page-header {
-  margin-bottom: 30px;
-}
-.page-header .lead {
-  margin-bottom: 10px;
-}
-
-
-/* Non-responsive overrides
- *
- * Utilitze the following CSS to disable the responsive-ness of the container,
+ * Utilize the following CSS to disable the responsive-ness of the container,
  * grid system, and navbar.
  */
+
 /* Reset the container */
 .container {
-  width: 970px;
   max-width: none !important;
-}
-
-/* Demonstrate the grids */
-.col-xs-3 {
-}
-
-.container .navbar-header,
-.container .navbar-collapse {
-  margin-right: 0;
-  margin-left: 0;
+  width: 970px;
 }
 
 /* Always float the navbar header */
 .navbar-header {
   float: left;
+}
+
+.container>.navbar-header,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container-fluid>.navbar-collapse {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Undo the collapsing navbar */
@@ -51,32 +30,78 @@ body {
   padding-bottom: 0;
   overflow: visible !important;
 }
+
 .navbar-toggle {
   display: none;
 }
+
 .navbar-collapse {
   border-top: 0;
 }
+
 .navbar-brand {
   margin-left: -15px;
 }
+
+.navbar-form {
+  float: left;
+  border: none;
+  margin: 7px 15px;
+  padding: 0 15px;
+}
+
+.navbar-form .form-control {
+  width: auto;
+}
+
 /* Always apply the floated nav */
 .navbar-nav {
   float: left;
   margin: 0;
 }
+
 .navbar-nav > li {
   float: left;
 }
+
 .navbar-nav > li > a {
   padding: 15px;
 }
+
 /* Redeclare since we override the float above */
 .navbar-nav.navbar-right {
   float: right;
 }
+
 /* Undo custom dropdowns */
 .navbar .navbar-nav .open .dropdown-menu {
   position: absolute;
   float: left;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
 }
