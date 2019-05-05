@@ -8,7 +8,7 @@ master_doc = 'index'
 project = u'sphinx theme for basicstrap style'
 copyright = u'2015, tell-k'
 
-version = '0.4.3'
+version = '0.5.0'
 
 # -- Options for HTML output --------------------------
 

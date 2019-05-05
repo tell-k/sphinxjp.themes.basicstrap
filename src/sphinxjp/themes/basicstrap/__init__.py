@@ -8,7 +8,6 @@
 """
 
 from os import path
-from sphinxjp.themes.basicstrap import directives
 
 __version__ = '0.5.0'
 

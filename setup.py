@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 import re
 import os
-import sys
 
 from setuptools import setup, find_packages
-from setuptools.command.test import test as TestCommand
 
 
 here = os.path.dirname(__file__)
@@ -29,22 +27,19 @@ tests_require = [
     'mock',
 ]
 
-long_description = '\n'.join([
-    open(os.path.join(here, 'src', 'README.txt')).read(),
-    open(os.path.join(here, 'src', 'AUTHORS.txt')).read(),
-    open(os.path.join(here, 'src', 'HISTORY.txt')).read(),
-])
+long_description = ""
+with open(os.path.join(here, 'README.rst')) as fp:
+    long_description = fp.read()
 
 classifiers = [
     'Development Status :: 4 - Beta',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python',
-    'Programming Language :: Python :: 2',
-    'Programming Language :: Python :: 2.6',
-    'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.3',
     'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
     'Framework :: Sphinx',
     'Framework :: Sphinx :: Extension',
     'Framework :: Sphinx :: Theme',
@@ -71,7 +66,7 @@ setup(
     install_requires=install_requires,
     tests_require=tests_require,
     include_package_data=True,
-    entry_points= {
+    entry_points={
         'sphinx.html_themes': [
             'basicstrap = sphinxjp.themes.basicstrap',
         ]
