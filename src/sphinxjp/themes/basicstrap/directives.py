@@ -8,6 +8,9 @@
 """
 from docutils import nodes
 from docutils.parsers.rst.roles import set_classes
+from sphinx.util import logging
+
+log = logging.getLogger(__name__)
 
 
 def fonticon_role(name, rawtext, text, lineno,
@@ -33,6 +36,6 @@ def setup(app):
     """Initialize
     :param app: Sphinx application context.
     """
-    app.info('Initializing Basicstrap theme directives')
+    log.info('Initializing Basicstrap theme directives')
     app.add_role('fonticon', fonticon_role)
     return
