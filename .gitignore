@@ -12,3 +12,4 @@ parts
 .tox
 .coverage
 .eggs
+venv

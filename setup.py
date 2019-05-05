@@ -7,24 +7,6 @@ from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
 
-class PyTest(TestCommand):
-    user_options = [('pytest-args=', 'a', 'Arguments to pass to py.test')]
-
-    def initialize_options(self):
-        TestCommand.initialize_options(self)
-        self.pytest_args = []
-
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
-        import pytest
-        errno = pytest.main(self.pytest_args)
-        sys.exit(errno)
-
 here = os.path.dirname(__file__)
 
 version_regex = re.compile(r".*__version__ = '(.*?)'", re.S)
@@ -35,6 +17,10 @@ version = version_regex.match(open(version_script, 'r').read()).group(1)
 install_requires = [
     'setuptools',
     'Sphinx',
+]
+
+setup_requires = [
+    "pytest-runner"
 ]
 
 tests_require = [
@@ -81,16 +67,14 @@ setup(
     namespace_packages=['sphinxjp', 'sphinxjp.themes'],
     packages=find_packages('src', exclude=['tests']),
     package_dir={'': 'src'},
-    cmdclass={'test': PyTest},
+    setup_requires=setup_requires,
     install_requires=install_requires,
     tests_require=tests_require,
     include_package_data=True,
-    entry_points="""
-        [sphinx_themes]
-        path = sphinxjp.themes.basicstrap:get_path
-
-        [sphinx_directives]
-        setup = sphinxjp.themes.basicstrap:setup
-    """,
+    entry_points= {
+        'sphinx.html_themes': [
+            'basicstrap = sphinxjp.themes.basicstrap',
+        ]
+    },
     zip_safe=False,
 )

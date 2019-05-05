@@ -1,3 +1,4 @@
 include MANIFEST.in
+global-exclude *.swp
 recursive-include docs *
 recursive-include src *.py *.txt *.html *.css* *.conf *.png *.gif *.js* *.eot *.svg *.ttf *.woff *.otf

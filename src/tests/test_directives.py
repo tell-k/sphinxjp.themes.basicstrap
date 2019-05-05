@@ -51,9 +51,6 @@ class TestSetup(object):
 
         class DummyApp(object):
 
-            def info(self, info):
-                self.info = info
-
             def add_role(self, rolename, rolefunc):
                 self.rolename = rolename
                 self.rolefunc = rolefunc
@@ -62,6 +59,5 @@ class TestSetup(object):
 
         dummy_app = DummyApp()
         self._call_fut(dummy_app)
-        assert 'Initializing Basicstrap theme directives' == dummy_app.info
         assert 'fonticon' == dummy_app.rolename
         assert fonticon_role == dummy_app.rolefunc

@@ -33,10 +33,14 @@ class TestSetup(object):
         return self._get_target()(*args, **kwargs)
 
     def test_it(self):
-        dummy_app = "dummy_app"
 
-        with mock.patch('sphinxjp.themes.basicstrap.directives.setup',
-                        return_value=True, autospec=True) as mock_func:
+        class DummyApp:
 
-            self._call_fut(dummy_app)
-            mock_func.assert_called_with(dummy_app)
+            def add_html_theme(self, theme, path):
+                self.theme = theme
+                self.path = path
+
+        dummy_app = DummyApp()
+
+        self._call_fut(dummy_app)
+        assert dummy_app.theme == "basicstrap"

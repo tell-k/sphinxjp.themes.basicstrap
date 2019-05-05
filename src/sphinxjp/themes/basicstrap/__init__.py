@@ -10,10 +10,10 @@
 from os import path
 from sphinxjp.themes.basicstrap import directives
 
-__version__ = '0.4.3'
+__version__ = '0.5.0'
 
 package_dir = path.abspath(path.dirname(__file__))
-template_path = path.join(package_dir, 'templates')
+template_path = path.join(package_dir, 'templates', 'basicstrap')
 
 
 def get_path():
@@ -23,4 +23,4 @@ def get_path():
 
 def setup(app):
     """entry-point for sphinx directive."""
-    directives.setup(app)
+    app.add_html_theme('basicstrap', get_path())
