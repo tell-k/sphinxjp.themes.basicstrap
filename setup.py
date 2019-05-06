@@ -56,7 +56,7 @@ setup(
     classifiers=classifiers,
     keywords=['sphinx', 'reStructuredText', 'theme'],
     author='tell-k',
-    author_email='ffk2005 at gmail dot com',
+    author_email='ffk2005@gmail.com',
     url='https://github.com/tell-k/sphinxjp.themes.basicstrap',
     license='MIT',
     namespace_packages=['sphinxjp', 'sphinxjp.themes'],
