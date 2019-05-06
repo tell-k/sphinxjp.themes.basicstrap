@@ -1,5 +1,5 @@
 =============================================
-Basicstrap style theme sample for Sphina2x
+Basicstrap style theme sample for Sphinx
 =============================================
 
 
