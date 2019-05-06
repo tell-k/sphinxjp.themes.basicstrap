@@ -39,6 +39,10 @@ class TestSetup(object):
                 self.theme = theme
                 self.path = path
 
+            def add_role(self, name, role):
+                self.name = role
+                self.role = role
+
         dummy_app = DummyApp()
 
         self._call_fut(dummy_app)

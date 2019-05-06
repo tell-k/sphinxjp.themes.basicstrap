@@ -8,6 +8,7 @@
 """
 
 from os import path
+from sphinxjp.themes.basicstrap import directives
 
 __version__ = '0.5.0'
 
@@ -23,3 +24,4 @@ def get_path():
 def setup(app):
     """entry-point for sphinx directive."""
     app.add_html_theme('basicstrap', get_path())
+    directives.setup(app)
